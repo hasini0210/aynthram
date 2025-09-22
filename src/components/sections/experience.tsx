@@ -43,7 +43,7 @@ export default function Experience() {
                                     <step.icon className="h-6 w-6" />
                                 </div>
                                 <div className="pl-8 md:pl-0 md:w-1/2 md:p-8">
-                                    <div className={`p-6 rounded-lg bg-muted/40 ${index % 2 === 0 ? 'md:ml-auto md:text-right' : 'md:-ml-full md:text-left'}`}>
+                                    <div className={`p-6 rounded-lg bg-primary/5 ${index % 2 === 0 ? 'md:ml-auto md:text-right' : 'md:-ml-full md:text-left'}`}>
                                         <h3 className="font-headline text-2xl font-bold text-primary mb-2">{step.title}</h3>
                                         <p className="text-muted-foreground">{step.description}</p>
                                     </div>

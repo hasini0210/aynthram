@@ -5,6 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
+import Marquee from '@/components/ui/marquee';
+
+const keywords = [
+  "Leadership", "Innovation", "Growth Hacking", "Art of Storytelling", "Execution Excellence", "Sustainable Growth"
+];
 
 export default function Hero() {
   const [offsetY, setOffsetY] = useState(0);
@@ -18,7 +24,7 @@ export default function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-start overflow-hidden p-0">
+    <section id="home" className="relative h-screen min-h-[700px] w-full flex flex-col justify-center items-start overflow-hidden p-0">
       <div className="absolute inset-0 z-0">
         {heroImage && (
           <Image
@@ -31,7 +37,7 @@ export default function Hero() {
             data-ai-hint={heroImage.imageHint}
           />
         )}
-        <div className="absolute inset-0 bg-primary/60" />
+        <div className="absolute inset-0 bg-primary/80" />
       </div>
       <div className="container relative z-10 mx-auto px-4 md:px-6 text-left">
         <div className="max-w-3xl animate-fade-in-up">
@@ -54,6 +60,20 @@ export default function Hero() {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="relative z-10 w-full mt-auto mb-8">
+        <Marquee pauseOnHover className="[--duration:40s]">
+          {keywords.map((keyword) => (
+            <div
+              key={keyword}
+              className={cn(
+                "flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-2 text-primary-foreground bg-primary/40 backdrop-blur-sm mx-2"
+              )}
+            >
+              <span className="text-sm font-medium">{keyword}</span>
+            </div>
+          ))}
+        </Marquee>
       </div>
     </section>
   );

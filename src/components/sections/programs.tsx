@@ -22,24 +22,24 @@ const programs = [
 
 export default function Programs() {
   return (
-    <section id="programs" className="bg-muted/30">
+    <section id="programs" className="bg-primary">
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-12">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Our Programs</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary-foreground">Our Programs</h2>
+                <p className="mt-4 text-lg text-primary-foreground/80">
                     Each program is a modular, theme-based journey designed for profound personal and professional growth.
                 </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {programs.map((program) => (
-                    <Card key={program.title} className="flex flex-col transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
+                    <Card key={program.title} className="flex flex-col transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl bg-background border-secondary">
                         <CardHeader>
                             <CardTitle className="font-headline text-2xl text-primary">{program.title}</CardTitle>
                             <p className="text-sm font-semibold text-secondary uppercase tracking-wider">{program.duration}</p>
                         </CardHeader>
                         <CardContent className="flex-grow">
-                            <CardDescription>{program.description}</CardDescription>
+                            <CardDescription className="text-foreground/80">{program.description}</CardDescription>
                         </CardContent>
                         <CardFooter>
                            <Link href="#contact" className="w-full">

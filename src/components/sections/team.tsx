@@ -12,11 +12,11 @@ const teamMembers = [
 
 export default function Team() {
     return (
-        <section id="team" className="bg-background">
+        <section id="team" className="bg-primary text-primary-foreground">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Meet the Visionaries</h2>
-                    <p className="mt-4 text-lg text-muted-foreground">
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Meet the Visionaries</h2>
+                    <p className="mt-4 text-lg text-primary-foreground/80">
                         A collective of strategists, artists, and innovators dedicated to redefining leadership.
                     </p>
                 </div>
@@ -39,8 +39,8 @@ export default function Team() {
                                         )}
                                     </CardContent>
                                 </Card>
-                                <h3 className="mt-4 font-bold text-lg text-primary">{member.name}</h3>
-                                <p className="text-sm text-muted-foreground">{member.role}</p>
+                                <h3 className="mt-4 font-bold text-lg text-primary-foreground">{member.name}</h3>
+                                <p className="text-sm text-primary-foreground/70">{member.role}</p>
                             </div>
                         );
                     })}

@@ -53,26 +53,26 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-background">
+    <section id="contact" className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
             <div className="space-y-6">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Begin Your Transformation</h2>
-                <p className="text-lg text-muted-foreground">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold">Begin Your Transformation</h2>
+                <p className="text-lg text-primary-foreground/80">
                     Reach out to book a program, request a brochure, or discuss a custom engagement for your team.
                 </p>
                 <div className="space-y-4 pt-4">
                     <a href="mailto:vasudev.aynthram@gmail.com" className="flex items-center gap-4 group">
                         <Mail className="w-6 h-6 text-secondary"/>
-                        <span className="text-lg group-hover:text-primary transition-colors">vasudev.aynthram@gmail.com</span>
+                        <span className="text-lg group-hover:text-secondary transition-colors">vasudev.aynthram@gmail.com</span>
                     </a>
                     <a href="tel:+919703831819" className="flex items-center gap-4 group">
                         <Phone className="w-6 h-6 text-secondary"/>
-                        <span className="text-lg group-hover:text-primary transition-colors">+91 9703831819</span>
+                        <span className="text-lg group-hover:text-secondary transition-colors">+91 9703831819</span>
                     </a>
                 </div>
             </div>
-            <div className="p-8 rounded-lg border bg-muted/30">
+            <div className="p-8 rounded-lg border border-primary-foreground/20 bg-primary/50">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

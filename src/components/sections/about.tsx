@@ -27,14 +27,14 @@ export default function About() {
               {uniquePoints.map((point, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
-                  <span>{point}</span>
+                  <span className="text-foreground/80">{point}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="flex justify-center items-center">
             {aboutImage && (
-              <Card className="overflow-hidden shadow-2xl rounded-xl w-full max-w-sm rotate-3 hover:-rotate-1 transition-transform duration-500">
+              <Card className="overflow-hidden shadow-2xl rounded-xl w-full max-w-sm rotate-3 hover:-rotate-1 transition-transform duration-500 bg-primary border-secondary border-4">
                 <CardContent className="p-0">
                   <Image
                     src={aboutImage.imageUrl}

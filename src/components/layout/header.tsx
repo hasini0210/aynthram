@@ -16,7 +16,7 @@ const navItems = [
 ];
 
 const Logo = () => (
-    <Link href="/" className="font-headline text-2xl font-bold text-primary">
+    <Link href="/" className="font-headline text-2xl font-bold text-primary-foreground">
         Aynthram
     </Link>
 );
@@ -36,13 +36,13 @@ export default function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled ? "bg-background/80 shadow-md backdrop-blur-sm" : "bg-transparent"
+      scrolled ? "bg-primary/80 shadow-md backdrop-blur-sm" : "bg-transparent"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Logo />
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+            <Link key={item.name} href={item.href} className="text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors">
               {item.name}
             </Link>
           ))}
@@ -55,17 +55,17 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="text-primary-foreground hover:text-secondary hover:bg-transparent">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-background">
+            <SheetContent side="right" className="w-[300px] bg-primary">
                 <div className="p-6 h-full flex flex-col">
                     <div className="flex items-center justify-between mb-8">
                          <Logo />
                          <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
+                            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)} className="text-primary-foreground hover:text-secondary hover:bg-transparent">
                                 <X className="h-6 w-6" />
                                 <span className="sr-only">Close menu</span>
                             </Button>
@@ -76,7 +76,7 @@ export default function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                            className="text-lg font-medium text-primary-foreground hover:text-secondary transition-colors"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             {item.name}
