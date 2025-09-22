@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "An artisan works on a craft in a serene, focused setting, representing heritage and skill.",
-      "imageUrl": "https://picsum.photos/seed/aynthram-hero/1920/1080",
-      "imageHint": "artisan workshop"
+      "description": "A diverse group of professionals in a workshop, collaborating and engaging.",
+      "imageUrl": "https://picsum.photos/seed/leadership-summit/1920/1080",
+      "imageHint": "leadership summit"
     },
     {
       "id": "about-image",

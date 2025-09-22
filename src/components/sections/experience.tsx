@@ -34,18 +34,18 @@ export default function Experience() {
                     </p>
                 </div>
 
-                <div className="relative max-w-4xl mx-auto">
-                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
+                <div className="relative max-w-5xl mx-auto">
+                    <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block"></div>
                     <div className="space-y-12">
                         {experienceSteps.map((step, index) => (
-                            <div key={index} className="relative flex items-start md:items-center">
-                                <div className="z-10 bg-secondary text-secondary-foreground rounded-full p-3 ring-8 ring-background flex-shrink-0">
-                                    <step.icon className="h-6 w-6" />
-                                </div>
-                                <div className="pl-8 md:pl-0 md:w-1/2 md:p-8">
-                                    <div className={`p-6 rounded-lg bg-primary/5 ${index % 2 === 0 ? 'md:ml-auto md:text-right' : 'md:-ml-full md:text-left'}`}>
-                                        <h3 className="font-headline text-2xl font-bold text-primary mb-2">{step.title}</h3>
-                                        <p className="text-muted-foreground">{step.description}</p>
+                             <div key={index} className="relative flex flex-col md:flex-row items-center justify-center group">
+                                <div className={`flex items-center w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:justify-end' : 'md:pl-8 md:justify-start md:flex-row-reverse'}`}>
+                                    <div className="z-10 bg-secondary text-secondary-foreground rounded-full p-3 ring-8 ring-background flex-shrink-0">
+                                        <step.icon className="h-6 w-6" />
+                                    </div>
+                                    <div className="p-6 rounded-lg bg-primary/5 w-full ml-4 md:ml-0 md:mr-4 group-last:mb-0">
+                                        <h3 className={`font-headline text-2xl font-bold text-primary mb-2 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>{step.title}</h3>
+                                        <p className={`text-muted-foreground ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>{step.description}</p>
                                     </div>
                                 </div>
                             </div>

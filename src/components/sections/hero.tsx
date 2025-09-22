@@ -39,7 +39,7 @@ export default function Hero() {
         )}
         <div className="absolute inset-0 bg-primary/80" />
       </div>
-      <div className="container relative z-10 mx-auto px-4 md:px-6 text-left">
+      <div className="container relative z-20 mx-auto px-4 md:px-6 text-left">
         <div className="max-w-3xl animate-fade-in-up">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-7xl">
             Crafting Leaders.
@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="relative z-10 w-full mt-auto mb-8">
+      <div className="relative z-20 w-full mt-auto mb-8">
         <Marquee pauseOnHover className="[--duration:40s]">
           {keywords.map((keyword) => (
             <div
