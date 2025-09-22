@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "An artisan works on a craft in a serene, focused setting, representing heritage and skill.",
+      "imageUrl": "https://picsum.photos/seed/aynthram-hero/1920/1080",
+      "imageHint": "artisan workshop"
+    },
+    {
+      "id": "about-image",
+      "description": "Close up shot of hands working on a piece of pottery.",
+      "imageUrl": "https://picsum.photos/seed/aynthram-about/600/800",
+      "imageHint": "pottery hands"
+    },
+    {
+      "id": "team-vasudev",
+      "description": "Professional headshot of Vasudev Vangara.",
+      "imageUrl": "https://picsum.photos/seed/vasudev/400/400",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-gaman",
+      "description": "Professional headshot of Gaman Palem.",
+      "imageUrl": "https://picsum.photos/seed/gaman/400/400",
+      "imageHint": "man artist"
+    },
+    {
+      "id": "team-adarsh",
+      "description": "Professional headshot of Adarsh Chintalapti.",
+      "imageUrl": "https://picsum.photos/seed/adarsh/400/400",
+      "imageHint": "man professional"
+    },
+    {
+      "id": "team-chaitanya",
+      "description": "Professional headshot of Chaitanya Muppala.",
+      "imageUrl": "https://picsum.photos/seed/chaitanya/400/400",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "team-yamini",
+      "description": "Professional headshot of Yamini Rapeti.",
+      "imageUrl": "https://picsum.photos/seed/yamini/400/400",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "partner-1",
+      "description": "Logo for partner 1.",
+      "imageUrl": "https://picsum.photos/seed/partner1/160/80",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Logo for partner 2.",
+      "imageUrl": "https://picsum.photos/seed/partner2/160/80",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "partner-3",
+      "description": "Logo for partner 3.",
+      "imageUrl": "https://picsum.photos/seed/partner3/160/80",
+      "imageHint": "brand logo"
+    },
+    {
+      "id": "partner-4",
+      "description": "Logo for partner 4.",
+      "imageUrl": "https://picsum.photos/seed/partner4/160/80",
+      "imageHint": "brand logo"
+    },
+    {
+      "id": "partner-5",
+      "description": "Logo for partner 5.",
+      "imageUrl": "https://picsum.photos/seed/partner5/160/80",
+      "imageHint": "company logo"
+    }
+  ]
 }
