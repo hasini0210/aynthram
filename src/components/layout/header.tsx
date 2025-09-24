@@ -10,8 +10,7 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Programs', href: '#programs' },
-  { name: 'Method', href: '#experience' },
-  { name: 'Team', href: '#team' },
+  { name: 'Our Approach', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -49,7 +48,7 @@ export default function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-4">
             <Link href="#contact">
-                <Button variant="secondary" className="uppercase tracking-wider font-medium">Book a Program</Button>
+                <Button variant="secondary" className="uppercase tracking-wider font-medium">Get Started</Button>
             </Link>
         </div>
         <div className="md:hidden">
@@ -85,7 +84,7 @@ export default function Header() {
                     </nav>
                     <div className="mt-auto">
                         <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                            <Button variant="secondary" size="lg" className="w-full uppercase tracking-wider font-medium">Book a Program</Button>
+                            <Button variant="secondary" size="lg" className="w-full uppercase tracking-wider font-medium">Get Started</Button>
                         </Link>
                         <div className="text-center mt-4">
                             <a href="mailto:vasudev.aynthram@gmail.com" className="text-sm text-muted-foreground">vasudev.aynthram@gmail.com</a>

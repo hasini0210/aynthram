@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -7,45 +6,72 @@ export default function About() {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-image');
 
   const uniquePoints = [
-    "Art-led immersion: Unlocking creativity and perspective through hands-on artistic engagement.",
-    "Odisha heritage roots: Drawing inspiration from the rich cultural and artistic traditions of Odisha.",
-    "Sustainability focus: Promoting eco-conscious leadership and community empowerment.",
+    { 
+      title: "Neuroscience & Psychology",
+      description: "Understanding human behavior, decision-making, and adaptability."
+    },
+    {
+      title: "Business & Strategy",
+      description: "Mastering the art of scaling, sustaining, and innovating in business."
+    },
+    {
+      title: "Philosophy & Reflection",
+      description: "Learning timeless wisdom to navigate modern complexities."
+    },
+    {
+      title: "Art & Experiential Learning",
+      description: "Using Indian performance arts to spark insight, empathy, and transformation."
+    },
   ];
 
   return (
     <section id="about" className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
-              Transforming Leaders, Empowering Artisans, Preserving Heritage.
+              Where Ancient Wisdom Meets Modern Leadership
             </h2>
             <p className="text-lg text-muted-foreground">
-              Aynthram Leadership Academy offers a paradigm shift in leadership development. We move beyond traditional models to cultivate leaders who are not only effective but also empathetic, creative, and deeply connected to their cultural roots.
+              In a world of rapid disruption, are you leading or just managing? At Aynthram Leadership Academy, we don’t just teach leadership—we transform the way you think, work, and lead.
             </p>
             <ul className="space-y-4">
-              {uniquePoints.map((point, index) => (
-                <li key={index} className="flex items-start gap-4">
-                  <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
-                  <span className="text-foreground/80">{point}</span>
+              {uniquePoints.map((point) => (
+                <li key={point.title} className="flex items-start gap-4">
+                  <div className="mt-1.5 h-3 w-3 flex-shrink-0 rounded-full bg-secondary" />
+                  <div>
+                    <h3 className="font-semibold text-foreground">{point.title}</h3>
+                    <p className="text-foreground/80">{point.description}</p>
+                  </div>
                 </li>
               ))}
             </ul>
+            <p className="text-lg text-muted-foreground pt-4">
+              We bridge the gap between ancient wisdom and cutting-edge leadership to build professionals who don’t just stay relevant but redefine the game.
+            </p>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="relative flex justify-center items-center">
             {aboutImage && (
-              <Card className="overflow-hidden shadow-2xl rounded-xl w-full max-w-sm rotate-3 hover:-rotate-1 transition-transform duration-500 bg-primary border-secondary border-4">
-                <CardContent className="p-0">
-                  <Image
-                    src={aboutImage.imageUrl}
-                    alt={aboutImage.description}
-                    width={500}
-                    height={650}
-                    className="object-cover aspect-[3/4]"
-                    data-ai-hint={aboutImage.imageHint}
-                  />
-                </CardContent>
-              </Card>
+              <>
+                <Card className="overflow-hidden shadow-2xl rounded-xl w-full max-w-md">
+                  <CardContent className="p-0">
+                    <Image
+                      src={aboutImage.imageUrl}
+                      alt={aboutImage.description}
+                      width={600}
+                      height={700}
+                      className="object-cover aspect-[6/7]"
+                      data-ai-hint={aboutImage.imageHint}
+                    />
+                  </CardContent>
+                </Card>
+                <div className="absolute -bottom-8 -right-8 w-64">
+                   <Card className="bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg">
+                    <h3 className="font-bold text-xl font-headline">Heritage + Innovation</h3>
+                    <p className="mt-1 text-sm">Transforming leaders through timeless Indian wisdom</p>
+                   </Card>
+                </div>
+              </>
             )}
           </div>
         </div>

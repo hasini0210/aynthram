@@ -2,74 +2,74 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A diverse group of professionals in a workshop, collaborating and engaging.",
-      "imageUrl": "https://picsum.photos/seed/leadership-summit/1920/1080",
-      "imageHint": "leadership summit"
+      "description": "Dynamic image of a leader presenting to an engaged audience in a modern setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1618593158420-ec88ec1c69fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsZWFkZXIlMjBwcmVzZW50YXRpb258ZW58MHx8fHwxNzU4NzIxNzAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leader presentation"
     },
     {
       "id": "about-image",
-      "description": "Close up shot of hands working on a piece of pottery.",
-      "imageUrl": "https://picsum.photos/seed/aynthram-about/600/800",
-      "imageHint": "pottery hands"
+      "description": "A beautiful illustration of a woman in traditional Indian attire, dancing against a backdrop of ancient pillars and a glowing sun, symbolizing the fusion of heritage and innovation.",
+      "imageUrl": "https://images.unsplash.com/photo-1547106510-6aec13ee41ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpbmRpYW4lMjBkYW5jZXxlbnwwfHx8fDE3NTg2NzMwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian dance"
     },
     {
       "id": "team-vasudev",
       "description": "Professional headshot of Vasudev Vangara.",
-      "imageUrl": "https://picsum.photos/seed/vasudev/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg3MDg5NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
       "id": "team-gaman",
       "description": "Professional headshot of Gaman Palem.",
-      "imageUrl": "https://picsum.photos/seed/gaman/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1648332658855-cf21aec8a614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBhcnRpc3R8ZW58MHx8fHwxNzU4NjU3NTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man artist"
     },
     {
       "id": "team-adarsh",
       "description": "Professional headshot of Adarsh Chintalapti.",
-      "imageUrl": "https://picsum.photos/seed/adarsh/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzU4NzAxODI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man professional"
     },
     {
       "id": "team-chaitanya",
       "description": "Professional headshot of Chaitanya Muppala.",
-      "imageUrl": "https://picsum.photos/seed/chaitanya/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1562124638-724e13052daf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc1ODcwMzE2NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man smiling"
     },
     {
       "id": "team-yamini",
       "description": "Professional headshot of Yamini Rapeti.",
-      "imageUrl": "https://picsum.photos/seed/yamini/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODY0MDczOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
       "id": "partner-1",
       "description": "Logo for partner 1.",
-      "imageUrl": "https://picsum.photos/seed/partner1/160/80",
+      "imageUrl": "https://images.unsplash.com/photo-1622465911368-72162f8da3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NTg2NzI0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "company logo"
     },
     {
       "id": "partner-2",
       "description": "Logo for partner 2.",
-      "imageUrl": "https://picsum.photos/seed/partner2/160/80",
+      "imageUrl": "https://images.unsplash.com/photo-1529612700005-e35377bf1415?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NTg2NzI0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "company logo"
     },
     {
       "id": "partner-3",
       "description": "Logo for partner 3.",
-      "imageUrl": "https://picsum.photos/seed/partner3/160/80",
+      "imageUrl": "https://images.unsplash.com/photo-1617727553252-65863c156eb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxicmFuZCUyMGxvZ298ZW58MHx8fHwxNzU4NzA3MDk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "brand logo"
     },
     {
       "id": "partner-4",
       "description": "Logo for partner 4.",
-      "imageUrl": "https://picsum.photos/seed/partner4/160/80",
+      "imageUrl": "https://images.unsplash.com/photo-1617727553252-65863c156eb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxicmFuZCUyMGxvZ298ZW58MHx8fHwxNzU4NzA3MDk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "brand logo"
     },
     {
       "id": "partner-5",
       "description": "Logo for partner 5.",
-      "imageUrl": "https://picsum.photos/seed/partner5/160/80",
+      "imageUrl": "https://images.unsplash.com/photo-1627843563095-f6e94676cfe0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NTg2NzI0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "company logo"
     }
   ]
