@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import Marquee from '@/components/ui/marquee';
 
@@ -38,22 +37,17 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
-
   return (
     <section id="home" className="relative h-screen min-h-[700px] w-full flex items-center justify-start overflow-hidden p-0">
       <div className="absolute inset-0 z-0">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover"
-            style={{ transform: `translateY(${offsetY * 0.3}px)` }}
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
+        <Image
+          src="/images/herobanner.jpg"
+          alt="Dynamic image of a leader presenting to an engaged audience in a modern setting."
+          fill
+          className="object-cover"
+          style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+          priority
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/70 to-primary/10" />
       </div>
       <div className="relative z-10 w-full">

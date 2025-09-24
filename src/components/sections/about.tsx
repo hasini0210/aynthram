@@ -1,10 +1,7 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function About() {
-  const aboutImage = PlaceHolderImages.find(img => img.id === 'about-image');
-
   const uniquePoints = [
     { 
       title: "Neuroscience & Psychology",
@@ -51,28 +48,25 @@ export default function About() {
             </p>
           </div>
           <div className="relative flex justify-center items-center">
-            {aboutImage && (
-              <>
-                <Card className="overflow-hidden shadow-2xl rounded-xl w-full max-w-md">
-                  <CardContent className="p-0">
-                    <Image
-                      src={aboutImage.imageUrl}
-                      alt={aboutImage.description}
-                      width={600}
-                      height={700}
-                      className="object-cover aspect-[6/7]"
-                      data-ai-hint={aboutImage.imageHint}
-                    />
-                  </CardContent>
-                </Card>
-                <div className="absolute -bottom-8 -right-8 w-64">
-                   <Card className="bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg">
-                    <h3 className="font-bold text-xl font-headline">Heritage + Innovation</h3>
-                    <p className="mt-1 text-sm">Transforming leaders through timeless Indian wisdom</p>
-                   </Card>
-                </div>
-              </>
-            )}
+            <>
+              <Card className="overflow-hidden shadow-2xl rounded-xl w-full max-w-md">
+                <CardContent className="p-0">
+                  <Image
+                    src="/images/about.jpg"
+                    alt="A beautiful illustration of a woman in traditional Indian attire"
+                    width={600}
+                    height={700}
+                    className="object-cover aspect-[6/7]"
+                  />
+                </CardContent>
+              </Card>
+              <div className="absolute -bottom-8 -right-8 w-64">
+                 <Card className="bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg">
+                  <h3 className="font-bold text-xl font-headline">Heritage + Innovation</h3>
+                  <p className="mt-1 text-sm">Transforming leaders through timeless Indian wisdom</p>
+                 </Card>
+              </div>
+            </>
           </div>
         </div>
       </div>
