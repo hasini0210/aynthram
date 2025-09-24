@@ -84,26 +84,26 @@ export default function Impact() {
   });
 
   return (
-    <section id="impact" className="bg-background" ref={ref}>
+    <section id="impact" className="bg-primary text-primary-foreground" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="font-semibold text-secondary mb-2">OUR IMPACT</p>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Measurable Growth for Leaders and Communities</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Measurable Growth for Leaders and Communities</h2>
+            <p className="mt-4 text-lg text-primary-foreground/80">
                 We are committed to creating a virtuous cycle of growth, where leadership development directly fuels community empowerment and cultural preservation.
             </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center max-w-5xl mx-auto items-center justify-center sm:[&>*:nth-child(1)]:lg:col-start-1 sm:[&>*:nth-child(2)]:lg:col-start-2 sm:[&>*:nth-child(3)]:lg:col-start-3 sm:[&>*:nth-child(4)]:lg:col-start-2 sm:[&>*:nth-child(5)]:lg:col-start-3 lg:[&>*:nth-child(4)]:-ml-32 lg:[&>*:nth-child(5)]:-mr-32">
              {impactStats.map((stat) => (
-                <Card key={stat.label} className="bg-card shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <Card key={stat.label} className="bg-background/5 border border-background/10 shadow-lg hover:shadow-2xl transition-shadow duration-300">
                   <CardContent className="p-8">
                       <div className="mx-auto bg-secondary/10 text-secondary w-fit p-3 rounded-full mb-4">
                         <stat.icon className="w-7 h-7" />
                       </div>
-                      <p className="font-headline text-5xl font-bold text-primary">
+                      <p className="font-headline text-5xl font-bold text-background">
                         {inView ? <Counter to={stat.value} prefix={stat.prefix} suffix={stat.suffix} isK={stat.isK} /> : <span>{stat.prefix}0{stat.suffix}</span>}
                       </p>
-                      <h3 className="mt-2 text-md text-muted-foreground">{stat.label}</h3>
+                      <h3 className="mt-2 text-md text-background/70">{stat.label}</h3>
                   </CardContent>
                 </Card>
             ))}
