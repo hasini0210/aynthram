@@ -6,6 +6,7 @@ import Programs from '@/components/sections/programs';
 import Experience from '@/components/sections/experience';
 import Impact from '@/components/sections/impact';
 import Team from '@/components/sections/team';
+import Testimonials from '@/components/sections/testimonials';
 import Partners from '@/components/sections/partners';
 import Contact from '@/components/sections/contact';
 
@@ -20,6 +21,7 @@ export default function Home() {
         <Experience />
         <Impact />
         <Team />
+        <Testimonials />
         <Partners />
         <Contact />
       </main>
