@@ -1,93 +1,111 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Briefcase, Users, Sparkles, TrendingUp, Scale } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const impactStats = [
     {
-        value: 50000000,
-        label: "Projected Revenue (Year 1)",
-        description: "Targeting significant growth and financial sustainability from the first year of operations.",
-        prefix: "₹",
-        suffix: ""
-    },
-    {
-        value: 700,
-        label: "Artisan Engagement",
-        description: "Empowering over 700 artisans within the first three years through direct collaboration.",
-        prefix: "",
-        suffix: "+"
-    },
-    {
+        icon: Briefcase,
         value: 1500,
-        label: "Professionals Trained",
-        description: "Aiming to transform over 1,500 leaders and professionals annually with our unique programs.",
-        prefix: "",
-        suffix: "+"
+        label: "Professionals Trained Annually",
+        suffix: "K+",
+        isK: true,
+    },
+    {
+        icon: Users,
+        value: 700,
+        label: "Artisans Engaged (3-Year Goal)",
+        suffix: "+",
+    },
+    {
+        icon: Sparkles,
+        value: 10,
+        label: "Unique Art Forms Integrated",
+        suffix: "+",
+    },
+    {
+        icon: TrendingUp,
+        value: 25,
+        label: "Avg. Increase in Leadership Scores",
+        suffix: "%",
+    },
+    {
+        icon: Scale,
+        value: 1,
+        label: "Revenue Reinvested into Communities",
+        prefix: "$",
+        suffix: "M+",
     },
 ];
 
-const Counter = ({ to, prefix = "", suffix = "" }: { to: number, prefix?: string, suffix?: string }) => {
+const Counter = ({ to, prefix = "", suffix = "", isK = false }: { to: number, prefix?: string, suffix?: string, isK?: boolean }) => {
     const [count, setCount] = useState(0);
-    const duration = 2000; // 2 seconds
+    const duration = 2000; 
 
     useEffect(() => {
         let start = 0;
         const end = to;
         if (start === end) return;
 
-        const incrementTime = (duration / end) * 1;
-        
-        const timer = setInterval(() => {
-            start += 1;
+        const totalFrames = duration / (1000/60); // 60fps
+        const increment = end / totalFrames;
+
+        const counter = () => {
+            start += increment;
+            if (start > end) {
+                setCount(end);
+                return;
+            }
             setCount(start);
-            if (start === end) clearInterval(timer);
-        }, incrementTime);
+            requestAnimationFrame(counter);
+        };
+        
+        requestAnimationFrame(counter);
 
-        return () => clearInterval(timer);
-    }, [to]);
-    
+    }, [to, duration]);
+
     const formatNumber = (num: number) => {
-        if (num >= 10000000) {
-            return `${(num / 10000000).toFixed(1)} Cr`
+        if (isK) {
+            return (num / 1000).toFixed(1);
         }
-        return new Intl.NumberFormat('en-IN').format(num);
+        return Math.ceil(num).toLocaleString();
     }
 
-    // Special formatting for crores
-    if (to >= 10000000) {
-         const croreValue = count / 10000000;
-         return <span>{prefix}{croreValue.toFixed(2)} Cr</span>
-    }
-
-    return <span>{prefix}{new Intl.NumberFormat('en-IN').format(count)}{suffix}</span>;
+    return <span>{prefix}{formatNumber(count)}{suffix}</span>;
 };
 
 
 export default function Impact() {
   const { ref, inView } = useInView({
       triggerOnce: true,
-      threshold: 0.5,
+      threshold: 0.3,
   });
 
   return (
-    <section id="impact" className="bg-primary text-primary-foreground" ref={ref}>
+    <section id="impact" className="bg-background" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Tangible Impact</h2>
-            <p className="mt-4 text-lg text-primary-foreground/80">
-                We measure success not just in leadership growth, but in community and heritage preservation.
+            <p className="font-semibold text-secondary mb-2">OUR IMPACT</p>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Measurable Growth for Leaders and Communities</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+                We are committed to creating a virtuous cycle of growth, where leadership development directly fuels community empowerment and cultural preservation.
             </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-            {impactStats.map((stat) => (
-                <div key={stat.label} className="p-8 rounded-lg bg-primary/60 border border-primary-foreground/10">
-                    <p className="font-headline text-5xl font-bold text-secondary">
-                      {inView ? <Counter to={stat.value} prefix={stat.prefix} suffix={stat.suffix} /> : <span>{stat.prefix}0{stat.suffix}</span>}
-                    </p>
-                    <h3 className="mt-2 text-xl font-semibold">{stat.label}</h3>
-                    <p className="mt-2 text-sm text-primary-foreground/70">{stat.description}</p>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center max-w-5xl mx-auto items-center justify-center sm:[&>*:nth-child(1)]:lg:col-start-1 sm:[&>*:nth-child(2)]:lg:col-start-2 sm:[&>*:nth-child(3)]:lg:col-start-3 sm:[&>*:nth-child(4)]:lg:col-start-2 sm:[&>*:nth-child(5)]:lg:col-start-3 lg:[&>*:nth-child(4)]:-ml-32 lg:[&>*:nth-child(5)]:-mr-32">
+             {impactStats.map((stat) => (
+                <Card key={stat.label} className="bg-card shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                  <CardContent className="p-8">
+                      <div className="mx-auto bg-secondary/10 text-secondary w-fit p-3 rounded-full mb-4">
+                        <stat.icon className="w-7 h-7" />
+                      </div>
+                      <p className="font-headline text-5xl font-bold text-primary">
+                        {inView ? <Counter to={stat.value} prefix={stat.prefix} suffix={stat.suffix} isK={stat.isK} /> : <span>{stat.prefix}0{stat.suffix}</span>}
+                      </p>
+                      <h3 className="mt-2 text-md text-muted-foreground">{stat.label}</h3>
+                  </CardContent>
+                </Card>
             ))}
         </div>
       </div>
