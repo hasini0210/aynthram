@@ -62,8 +62,8 @@ export default function Programs() {
                 {programs.map((program) => (
                     <Card key={program.title} className="flex flex-col transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl bg-background border-secondary">
                         <CardHeader>
-                            <CardTitle className="font-headline text-2xl text-secondary">{program.title}</CardTitle>
-                            <CardDescription className="text-foreground/80 pt-1">{program.subtitle}</CardDescription>
+                            <CardTitle className="font-headline text-2xl text-foreground">{program.title}</CardTitle>
+                            <CardDescription className="text-secondary pt-1">{program.subtitle}</CardDescription>
                         </CardHeader>
                         <CardContent className="flex-grow space-y-3">
                             {program.features.map(feature => (
