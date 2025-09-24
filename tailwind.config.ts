@@ -118,6 +118,10 @@ export default {
           '0%': { opacity: '1' },
           '100%': { opacity: '0' },
         },
+        'blink': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.2' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -126,6 +130,7 @@ export default {
         'marquee-horizontal': 'marquee-horizontal var(--duration) linear infinite',
         'fade-in': 'fade-in 0.5s ease-in-out',
         'fade-out': 'fade-out 0.5s ease-in-out',
+        'blink': 'blink 1.5s infinite ease-in-out',
       },
     },
   },
