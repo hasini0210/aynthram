@@ -35,18 +35,26 @@ export default function Experience() {
                 </div>
 
                 <div className="relative max-w-5xl mx-auto">
-                    <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block"></div>
-                    <div className="space-y-12">
+                    <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
+                    
+                    <div className="space-y-16">
                         {experienceSteps.map((step, index) => (
-                             <div key={index} className="relative flex flex-col md:flex-row items-center justify-center group">
-                                <div className={`flex items-center w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:justify-end' : 'md:pl-8 md:justify-start md:flex-row-reverse'}`}>
-                                    <div className="z-10 bg-secondary text-secondary-foreground rounded-full p-3 ring-8 ring-background flex-shrink-0">
-                                        <step.icon className="h-6 w-6" />
+                             <div key={index} className="relative group">
+                                <div className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}>
+                                    <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
+                                        <div className="p-6 rounded-lg bg-primary/5 border border-primary/10">
+                                            <div className="flex items-center gap-4 mb-2">
+                                                 <div className={`md:hidden z-10 bg-secondary text-secondary-foreground rounded-full p-2 ring-4 ring-background flex-shrink-0`}>
+                                                    <step.icon className="h-5 w-5" />
+                                                </div>
+                                                <h3 className={`font-headline text-xl font-bold text-primary`}>{step.title}</h3>
+                                            </div>
+                                            <p className={`text-muted-foreground`}>{step.description}</p>
+                                        </div>
                                     </div>
-                                    <div className="p-6 rounded-lg bg-primary/5 w-full ml-4 md:ml-0 md:mr-4 group-last:mb-0">
-                                        <h3 className={`font-headline text-2xl font-bold text-primary mb-2 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>{step.title}</h3>
-                                        <p className={`text-muted-foreground ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>{step.description}</p>
-                                    </div>
+                                </div>
+                                <div className={`hidden md:flex absolute top-1/2 -translate-y-1/2 bg-secondary text-secondary-foreground rounded-full p-3 ring-8 ring-background z-10 ${index % 2 === 0 ? 'right-1/2 translate-x-1/2' : 'left-1/2 -translate-x-1/2'}`}>
+                                    <step.icon className="h-6 w-6" />
                                 </div>
                             </div>
                         ))}
