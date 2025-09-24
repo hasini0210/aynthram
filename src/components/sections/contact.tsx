@@ -68,64 +68,70 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-background text-foreground">
+    <section id="contact" className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Begin Your Leadership Transformation</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary-foreground">Begin Your Leadership Transformation</h2>
+            <p className="mt-4 text-lg text-primary-foreground/80">
                 Ready to craft your leadership legacy? Connect with us to explore how ancient wisdom can transform your modern leadership journey.
             </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-8">
-            <div className="lg:col-span-2 p-8 rounded-lg shadow-lg bg-card border border-border/10">
-              <h3 className="font-headline text-2xl font-semibold mb-6 text-primary">Get In Touch</h3>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                      <FormField control={form.control} name="name" render={({ field }) => (<FormItem><FormLabel>Your Name</FormLabel><FormControl><Input placeholder="John Doe" {...field} className="bg-background" /></FormControl><FormMessage /></FormItem>)} />
-                      <FormField control={form.control} name="email" render={({ field }) => (<FormItem><FormLabel>Email Address</FormLabel><FormControl><Input placeholder="john.doe@company.com" {...field} className="bg-background"/></FormControl><FormMessage /></FormItem>)} />
-                      <FormField control={form.control} name="organization" render={({ field }) => (<FormItem><FormLabel>Organization</FormLabel><FormControl><Input placeholder="Your Company" {...field} className="bg-background"/></FormControl><FormMessage /></FormItem>)} />
-                      <FormField control={form.control} name="message" render={({ field }) => (<FormItem><FormLabel>Tell us about your leadership goals...</FormLabel><FormControl><Textarea placeholder="I'm interested in..." {...field} className="bg-background"/></FormControl><FormMessage /></FormItem>)} />
-                  <Button type="submit" variant="secondary" size="lg" className="w-full uppercase tracking-wider font-medium" disabled={form.formState.isSubmitting}>
-                    {form.formState.isSubmitting ? 'Sending...' : 'Start the Conversation'}
-                  </Button>
-                </form>
-              </Form>
+            <div className="lg:col-span-2 relative">
+               <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary/50"></div>
+               <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-secondary/50"></div>
+               <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-secondary/50"></div>
+               <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-secondary/50"></div>
+              <div className="p-8 rounded-lg shadow-lg bg-primary border border-border/10 h-full">
+                <h3 className="font-headline text-2xl font-semibold mb-6 text-primary-foreground">Get In Touch</h3>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                        <FormField control={form.control} name="name" render={({ field }) => (<FormItem><FormLabel className="text-primary-foreground/80">Your Name</FormLabel><FormControl><Input placeholder="John Doe" {...field} className="bg-primary border-primary-foreground/30 focus:border-secondary focus:ring-secondary" /></FormControl><FormMessage /></FormItem>)} />
+                        <FormField control={form.control} name="email" render={({ field }) => (<FormItem><FormLabel className="text-primary-foreground/80">Email Address</FormLabel><FormControl><Input placeholder="john.doe@company.com" {...field} className="bg-primary border-primary-foreground/30 focus:border-secondary focus:ring-secondary"/></FormControl><FormMessage /></FormItem>)} />
+                        <FormField control={form.control} name="organization" render={({ field }) => (<FormItem><FormLabel className="text-primary-foreground/80">Organization</FormLabel><FormControl><Input placeholder="Your Company" {...field} className="bg-primary border-primary-foreground/30 focus:border-secondary focus:ring-secondary"/></FormControl><FormMessage /></FormItem>)} />
+                        <FormField control={form.control} name="message" render={({ field }) => (<FormItem><FormLabel className="text-primary-foreground/80">Tell us about your leadership goals...</FormLabel><FormControl><Textarea placeholder="I'm interested in..." {...field} className="bg-primary border-primary-foreground/30 focus:border-secondary focus:ring-secondary"/></FormControl><FormMessage /></FormItem>)} />
+                    <Button type="submit" variant="secondary" size="lg" className="w-full uppercase tracking-wider font-medium" disabled={form.formState.isSubmitting}>
+                      {form.formState.isSubmitting ? 'Sending...' : 'Start the Conversation'}
+                    </Button>
+                  </form>
+                </Form>
+              </div>
             </div>
 
             <div className="lg:col-span-3 space-y-8">
                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4 text-primary">Connect with Our Founder</h3>
+                    <h3 className="font-headline text-2xl font-semibold mb-4 text-primary-foreground">Connect with Our Founder</h3>
                     <div className="space-y-3">
                          <div className="flex items-center gap-3">
                             <User className="w-5 h-5 text-secondary"/>
                             <div>
-                                <p className="font-semibold">Vasudev Vangara</p>
-                                <p className="text-sm text-muted-foreground">Founder & CEO</p>
+                                <p className="font-semibold text-primary-foreground">Vasudev Vangara</p>
+                                <p className="text-sm text-primary-foreground/70">Founder & CEO</p>
                             </div>
                         </div>
                         <a href="mailto:vasudev.aynthram@gmail.com" className="flex items-center gap-3 group">
                             <Mail className="w-5 h-5 text-secondary"/>
-                            <span className="text-muted-foreground group-hover:text-primary transition-colors">vasudev.aynthram@gmail.com</span>
+                            <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">vasudev.aynthram@gmail.com</span>
                         </a>
                         <a href="tel:+919703831819" className="flex items-center gap-3 group">
                             <Phone className="w-5 h-5 text-secondary"/>
-                            <span className="text-muted-foreground group-hover:text-primary transition-colors">+91 9703831819</span>
+                            <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">+91 9703831819</span>
                         </a>
                     </div>
                 </div>
 
-                <div className="p-6 rounded-lg bg-primary/10 border border-primary/20">
-                     <h3 className="font-headline text-xl font-semibold text-primary">Transform Your Organization</h3>
-                     <p className="mt-2 text-muted-foreground">From individual leadership growth to organization-wide cultural transformation, discover how Aynthram can help you build leaders who don’t just stay relevant but redefine the game.</p>
+                <div className="p-6 rounded-lg bg-primary/80 border border-primary-foreground/10">
+                     <h3 className="font-headline text-xl font-semibold text-primary-foreground">Transform Your Organization</h3>
+                     <p className="mt-2 text-primary-foreground/70">From individual leadership growth to organization-wide cultural transformation, discover how Aynthram can help you build leaders who don’t just stay relevant but redefine the game.</p>
                      <Link href="/programs">
                         <Button variant="outline" className="mt-4 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">Learn More</Button>
                      </Link>
                 </div>
 
-                <div className="p-6 rounded-lg bg-background border border-border/10">
-                     <h3 className="font-headline text-xl font-semibold text-primary">Market Impact</h3>
-                     <ul className="mt-3 space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                <div className="p-6 rounded-lg bg-primary border border-primary-foreground/10">
+                     <h3 className="font-headline text-xl font-semibold text-primary-foreground">Market Impact</h3>
+                     <ul className="mt-3 space-y-2 text-sm text-primary-foreground/70 list-disc list-inside">
                         <li>Corporate L&D market in India: ₹5,800 Cr (8% CAGR)</li>
                         <li>Experiential tourism projected: ₹15,000 Cr by 2027</li>
                         <li>Heritage preservation through innovation</li>
