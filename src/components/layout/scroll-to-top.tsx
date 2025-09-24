@@ -49,16 +49,15 @@ export default function ScrollToTop() {
     <div className="fixed bottom-8 right-8 z-50">
       <Button
         onClick={scrollToTop}
-        variant="ghost"
+        variant="default"
         size="icon"
         className={cn(
-          "relative h-14 w-14 rounded-full bg-background text-primary shadow-lg transition-opacity hover:bg-background/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+          "relative h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg transition-opacity hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
           isVisible ? 'opacity-100' : 'opacity-0',
           "disabled:pointer-events-auto"
         )}
         aria-label="Scroll to top"
       >
-        <ChevronUp className="h-6 w-6" />
         <svg
           className="absolute inset-0 h-full w-full"
           viewBox="0 0 44 44"
@@ -69,7 +68,7 @@ export default function ScrollToTop() {
             cx="22"
             cy="22"
             r="20"
-            stroke="hsl(var(--primary) / 0.1)"
+            stroke="hsl(var(--primary-foreground) / 0.1)"
             strokeWidth="2.5"
             fill="transparent"
           />
@@ -86,6 +85,7 @@ export default function ScrollToTop() {
             className="transform -rotate-90 origin-center transition-all duration-300"
           />
         </svg>
+        <ChevronUp className="h-6 w-6" />
         <span className="sr-only">Go to top</span>
       </Button>
     </div>
