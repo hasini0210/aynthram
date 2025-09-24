@@ -1,4 +1,5 @@
-import { GitBranch, Mic, Sparkles, Users } from "lucide-react";
+import { GitBranch, Mic, Sparkles, Users, Drama, BrainCircuit, Leaf, BookOpen, Handshake, Gem } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const experienceSteps = [
     {
@@ -22,6 +23,54 @@ const experienceSteps = [
         description: "Intimate conversations with master artisans and leaders, culminating in a personal action plan."
     }
 ];
+
+const differencePoints = [
+    {
+        icon: Drama,
+        title: "Immersive Art-Based Learning",
+        description: "Learn from master artisans while fostering creative problem-solving through traditional Indian art forms."
+    },
+    {
+        icon: BrainCircuit,
+        title: "Cognitive Reframing",
+        description: "Neuroscience-backed approaches to reshape thinking patterns and decision-making processes."
+    },
+    {
+        icon: Leaf,
+        title: "Sustainability Focus",
+        description: "Integrating eco-conscious practices and ethical development aligned with modern sustainability goals."
+    },
+    {
+        icon: BookOpen,
+        title: "Timeless Wisdom",
+        description: "Ancient Indian philosophical teachings applied to contemporary leadership challenges."
+    },
+    {
+        icon: Handshake,
+        title: "Cultural Depth",
+        description: "Deep connections with indigenous heritage creating authentic and meaningful experiences."
+    },
+    {
+        icon: Gem,
+        title: "Transformative Experiences",
+        description: "Emotionally resonant journeys that create lasting behavioral and cultural shifts."
+    }
+]
+
+const interventionStats = [
+    {
+        value: "77%",
+        description: "Of employees are either not engaged or actively disengaged at work"
+    },
+    {
+        value: "45%",
+        description: "Of workplace interventions show no effect on work engagement"
+    },
+    {
+        value: "$8.9T",
+        description: "Lost annually due to low employee engagement (9% of global GDP)"
+    }
+]
 
 export default function Experience() {
     return (
@@ -59,6 +108,48 @@ export default function Experience() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 md:px-6 mt-24">
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">The Aynthram Difference</h2>
+                    <p className="mt-4 text-lg text-muted-foreground">
+                        We restore meaning and depth to leadership development through immersive experiences that engage people emotionally, culturally, and collectively.
+                    </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {differencePoints.map((point) => (
+                        <Card key={point.title} className="bg-background border-primary/10 hover:border-secondary transition-all shadow-sm hover:shadow-lg">
+                            <CardHeader className="flex flex-row items-center gap-4">
+                                <div className="bg-secondary/10 text-secondary p-3 rounded-full">
+                                    <point.icon className="w-6 h-6" />
+                                </div>
+                                <CardTitle className="font-headline text-xl text-primary">{point.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground">{point.description}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 md:px-6 mt-24">
+                <div className="bg-primary/5 rounded-lg p-8 md:p-12 border border-primary/10">
+                    <div className="text-center max-w-3xl mx-auto mb-10">
+                        <h2 className="font-headline text-3xl font-bold text-primary">Why Traditional Interventions Fall Short</h2>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-8 text-center">
+                        {interventionStats.map((stat) => (
+                            <div key={stat.value}>
+                                <p className="text-4xl font-bold text-secondary font-headline">{stat.value}</p>
+                                <p className="mt-2 text-muted-foreground">{stat.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="text-center mt-8 text-primary font-medium">Aynthram reimagines leadership development with depth, authenticity, and cultural resonance.</p>
                 </div>
             </div>
         </section>
