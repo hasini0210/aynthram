@@ -20,8 +20,12 @@ export default function ScrollToTop() {
   const handleScroll = () => {
     toggleVisibility();
     const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const progress = (window.pageYOffset / totalHeight) * 100;
-    setScrollProgress(progress);
+    if (totalHeight > 0) {
+      const progress = (window.pageYOffset / totalHeight) * 100;
+      setScrollProgress(progress);
+    } else {
+      setScrollProgress(0);
+    }
   };
 
   const scrollToTop = () => {
@@ -32,13 +36,13 @@ export default function ScrollToTop() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const circumference = 2 * Math.PI * 20; // 2 * pi * r
+  const circumference = 2 * Math.PI * 20; // 2 * pi * r (where r=20 from the SVG circle)
   const offset = circumference - (scrollProgress / 100) * circumference;
 
   return (
@@ -48,9 +52,11 @@ export default function ScrollToTop() {
         variant="ghost"
         size="icon"
         className={cn(
-          "relative h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg transition-opacity hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-          isVisible ? 'opacity-100' : 'opacity-0'
+          "relative h-14 w-14 rounded-full bg-background text-primary shadow-lg transition-opacity hover:bg-background/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+          isVisible ? 'opacity-100' : 'opacity-0',
+          "disabled:pointer-events-auto"
         )}
+        aria-label="Scroll to top"
       >
         <ChevronUp className="h-6 w-6" />
         <svg
@@ -63,8 +69,8 @@ export default function ScrollToTop() {
             cx="22"
             cy="22"
             r="20"
-            stroke="hsl(var(--primary-foreground) / 0.1)"
-            strokeWidth="3"
+            stroke="hsl(var(--primary) / 0.1)"
+            strokeWidth="2.5"
             fill="transparent"
           />
           <circle
@@ -72,7 +78,7 @@ export default function ScrollToTop() {
             cy="22"
             r="20"
             stroke="hsl(var(--secondary))"
-            strokeWidth="3"
+            strokeWidth="2.5"
             strokeDasharray={circumference}
             strokeDashoffset={offset}
             strokeLinecap="round"
