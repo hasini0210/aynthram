@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { useScrollSpy } from '@/hooks/use-scroll-spy';
+import Image from 'next/image';
 
 const navItems = [
   { id: 'about', name: 'About', href: '#about' },
@@ -17,10 +18,14 @@ const navItems = [
 ];
 
 const Logo = () => (
-    <Link href="/" className="font-headline text-2xl font-bold text-primary-foreground">
-        Aynthram
-    </Link>
+  <Link href="/" className="flex items-center gap-4">
+    <Image src="/logo.png" alt="Aynthram Logo" width={140} height={28} />
+    <div className="hidden md:flex flex-col items-start -ml-2">
+      <span className="text-xs font-medium text-primary-foreground/80 tracking-[0.2em]">LEADERSHIP ACADEMY</span>
+    </div>
+  </Link>
 );
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);

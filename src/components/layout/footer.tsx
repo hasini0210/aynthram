@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Mail, Phone, Linkedin, Twitter, Instagram } from 'lucide-react';
+import Image from 'next/image';
 
 const programLinks = [
   { name: 'Corporate Leadership', href: '#programs' },
@@ -16,9 +17,11 @@ const companyLinks = [
 ];
 
 const Logo = () => (
-    <div className="flex flex-col items-start">
-        <span className="font-headline text-3xl font-bold text-foreground tracking-wider">aünthram</span>
-        <span className="text-xs font-medium text-foreground/70 tracking-[0.2em]">LEADERSHIP ACADEMY</span>
+    <div className="flex items-center gap-4">
+        <Image src="/logo.png" alt="Aynthram Logo" width={180} height={36} />
+        <div className="flex flex-col items-start -ml-2">
+            <span className="text-xs font-medium text-foreground/70 tracking-[0.2em]">LEADERSHIP ACADEMY</span>
+        </div>
     </div>
 );
 
