@@ -121,7 +121,7 @@ export default function Experience() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {differencePoints.map((point) => (
-                        <Card key={point.title} className="text-center bg-card border-border/10 hover:shadow-xl transition-shadow duration-300 rounded-xl p-4">
+                        <Card key={point.title} className="text-center bg-card border-border/10 hover:shadow-xl transition-shadow duration-300 rounded-xl p-4 shadow-md">
                             <CardHeader className="items-center pb-4">
                                 <div className="p-3 rounded-full bg-secondary/10">
                                     <point.icon className="w-7 h-7 text-secondary" />
