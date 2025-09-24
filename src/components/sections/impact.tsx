@@ -64,7 +64,7 @@ const Counter = ({ to, prefix = "", suffix = "", isK = false }: { to: number, pr
         
         requestAnimationFrame(counter);
 
-    }, [to, duration]);
+    }, [to]);
 
     const formatNumber = (num: number) => {
         if (isK) {
