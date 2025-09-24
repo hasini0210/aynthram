@@ -23,6 +23,7 @@ export default {
       },
       colors: {
         'micro-accent': 'hsl(var(--micro-accent))',
+        'bloom': 'hsl(55 88% 82%)',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
