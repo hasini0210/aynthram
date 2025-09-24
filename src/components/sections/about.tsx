@@ -47,26 +47,26 @@ export default function About() {
               We bridge the gap between ancient wisdom and cutting-edge leadership to build professionals who don’t just stay relevant but redefine the game.
             </p>
           </div>
-          <div className="relative flex justify-center items-center">
-            <>
-              <Card className="overflow-hidden shadow-2xl rounded-xl w-full max-w-md">
+          <div className="relative flex justify-center items-center mt-8 md:mt-0">
+            <div className="relative w-full max-w-md">
+              <Card className="overflow-hidden shadow-2xl rounded-xl">
                 <CardContent className="p-0">
                   <Image
                     src="/images/about.jpg"
                     alt="A beautiful illustration of a woman in traditional Indian attire"
                     width={600}
                     height={700}
-                    className="object-cover aspect-[6/7]"
+                    className="object-cover aspect-[6/7] w-full"
                   />
                 </CardContent>
               </Card>
-              <div className="absolute -bottom-8 -right-8 w-64">
+              <div className="absolute -bottom-8 -right-4 sm:-right-8 w-64">
                  <Card className="bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg">
                   <h3 className="font-bold text-xl font-headline">Heritage + Innovation</h3>
                   <p className="mt-1 text-sm">Transforming leaders through timeless Indian wisdom</p>
                  </Card>
               </div>
-            </>
+            </div>
           </div>
         </div>
       </div>

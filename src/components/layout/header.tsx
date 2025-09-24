@@ -20,7 +20,7 @@ const navItems = [
 const Logo = () => (
   <Link href="/" className="flex items-center gap-4">
     <Image src="/images/logo.png" alt="Aynthram Logo" width={140} height={28} />
-    <div className="hidden md:flex flex-col items-start -ml-2">
+    <div className="flex flex-col items-start -ml-2">
       <span className="text-xs font-medium text-primary-foreground/80 tracking-[0.2em]">LEADERSHIP ACADEMY</span>
     </div>
   </Link>
@@ -47,7 +47,12 @@ export default function Header() {
       scrolled ? "bg-primary/80 shadow-md backdrop-blur-sm" : "bg-transparent"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Logo />
+        <div className="md:hidden">
+          <Logo />
+        </div>
+        <div className="hidden md:flex">
+          <Logo />
+        </div>
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link 
