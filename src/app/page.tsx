@@ -1,5 +1,6 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import ScrollToTop from '@/components/layout/scroll-to-top';
 import Hero from '@/components/sections/hero';
 import About from '@/components/sections/about';
 import Programs from '@/components/sections/programs';
@@ -26,6 +27,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

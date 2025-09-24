@@ -6,13 +6,14 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { useScrollSpy } from '@/hooks/use-scroll-spy';
 
 const navItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Programs', href: '#programs' },
-  { name: 'Our Approach', href: '#experience' },
-  { name: 'Impact', href: '#impact' },
-  { name: 'Contact', href: '#contact' },
+  { id: 'about', name: 'About', href: '#about' },
+  { id: 'programs', name: 'Programs', href: '#programs' },
+  { id: 'experience', name: 'Our Approach', href: '#experience' },
+  { id: 'impact', name: 'Impact', href: '#impact' },
+  { id: 'contact', name: 'Contact', href: '#contact' },
 ];
 
 const Logo = () => (
@@ -24,6 +25,8 @@ const Logo = () => (
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const activeId = useScrollSpy(navItems.map(item => item.id), { rootMargin: '0% 0% -80% 0%' });
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +45,14 @@ export default function Header() {
         <Logo />
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors">
+            <Link 
+              key={item.name} 
+              href={item.href} 
+              className={cn(
+                "text-sm font-medium transition-colors",
+                activeId === item.id ? 'text-secondary font-bold' : 'text-primary-foreground/80 hover:text-secondary'
+              )}
+            >
               {item.name}
             </Link>
           ))}
@@ -76,7 +86,10 @@ export default function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-lg font-medium text-primary-foreground hover:text-secondary transition-colors"
+                            className={cn(
+                              "text-lg font-medium transition-colors",
+                              activeId === item.id ? 'text-secondary font-bold' : 'text-primary-foreground hover:text-secondary'
+                            )}
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             {item.name}
