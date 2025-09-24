@@ -1,67 +1,96 @@
 import Link from 'next/link';
-import { Mail, Phone, Linkedin, Facebook } from 'lucide-react';
+import { Mail, Phone, Linkedin, Twitter, Instagram } from 'lucide-react';
 
-const navItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Programs', href: '#programs' },
-  { name: 'Team', href: '#team' },
-  { name: 'Contact', href: '#contact' },
+const programLinks = [
+  { name: 'Corporate Leadership', href: '#programs' },
+  { name: 'Startup Founders', href: '#programs' },
+  { name: 'Mid-Level Managers', href: '#programs' },
+  { name: 'Educators & Innovators', href: '#programs' },
+];
+
+const companyLinks = [
+    { name: 'About Us', href: '#about' },
+    { name: 'Our Approach', href: '#experience' },
+    { name: 'Heritage & Culture', href: '#experience' },
+    { name: 'Contact', href: '#contact' },
 ];
 
 const Logo = () => (
-    <Link href="/" className="font-headline text-2xl font-bold text-primary">
-        Aynthram
-    </Link>
+    <div className="flex flex-col items-start">
+        <span className="font-headline text-3xl font-bold text-primary-foreground tracking-wider">aünthram</span>
+        <span className="text-xs font-medium text-primary-foreground/70 tracking-[0.2em]">LEADERSHIP ACADEMY</span>
+    </div>
 );
+
 
 export default function Footer() {
   return (
-    <footer className="bg-background text-foreground">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
-            <div className="space-y-4">
-                <Link href="/" className="font-headline text-2xl font-bold text-foreground">Aynthram</Link>
-                <p className="text-foreground/70 text-sm max-w-xs">
-                    Crafting Leaders. Cultivating Legacies. Immersive, art-led leadership programs rooted in Odisha’s heritage.
-                </p>
-            </div>
-            <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-8">
-                <div>
-                    <h3 className="font-semibold text-secondary mb-4">Sitemap</h3>
-                    <nav className="flex flex-col gap-2">
-                        {navItems.map((item) => (
-                            <Link key={item.name} href={item.href} className="text-sm text-foreground/70 hover:text-secondary transition-colors">
-                            {item.name}
-                            </Link>
-                        ))}
-                    </nav>
-                </div>
-                <div>
-                    <h3 className="font-semibold text-secondary mb-4">Contact Us</h3>
-                    <div className="flex flex-col gap-2 text-sm">
-                         <a href="mailto:vasudev.aynthram@gmail.com" className="flex items-center gap-2 text-foreground/70 hover:text-secondary transition-colors">
-                            <Mail className="w-4 h-4"/>
-                            <span>Email Us</span>
-                        </a>
-                        <a href="tel:+919703831819" className="flex items-center gap-2 text-foreground/70 hover:text-secondary transition-colors">
-                            <Phone className="w-4 h-4"/>
-                            <span>Call Us</span>
-                        </a>
-                    </div>
-                </div>
-                 <div>
-                    <h3 className="font-semibold text-secondary mb-4">Follow Us</h3>
-                    <div className="flex items-center gap-4">
-                        <a href="#" aria-label="LinkedIn" className="text-foreground/70 hover:text-secondary"><Linkedin className="w-5 h-5"/></a>
-                        <a href="#" aria-label="Facebook" className="text-foreground/70 hover:text-secondary"><Facebook className="w-5 h-5"/></a>
-                    </div>
-                </div>
-            </div>
+    <>
+      <section className="bg-primary text-primary-foreground py-16">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-headline max-w-4xl mx-auto">
+              Empowering artisans, preserving heritage, transforming leaders —
+              <br />
+              <span className="text-primary-foreground/80">because leadership is not just a skill, it’s a mindset.</span>
+            </h2>
         </div>
-        <div className="border-t border-foreground/20 mt-8 pt-6 text-center text-sm text-foreground/50">
-            <p>&copy; {new Date().getFullYear()} Aynthram Leadership Academy. All Rights Reserved.</p>
+      </section>
+      <footer className="bg-primary text-primary-foreground/80">
+        <div className="container mx-auto px-4 md:px-6 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              
+              <div className="col-span-2 md:col-span-1 space-y-4">
+                  <Logo />
+                  <p className="text-sm max-w-xs pt-4">
+                      Transforming leadership through immersive experiences that blend ancient wisdom with modern practices.
+                  </p>
+                  <div className="flex items-center gap-4 pt-2">
+                      <a href="#" aria-label="LinkedIn" className="hover:text-secondary transition-colors"><Linkedin className="w-5 h-5"/></a>
+                      <a href="#" aria-label="Twitter" className="hover:text-secondary transition-colors"><Twitter className="w-5 h-5"/></a>
+                      <a href="#" aria-label="Instagram" className="hover:text-secondary transition-colors"><Instagram className="w-5 h-5"/></a>
+                  </div>
+              </div>
+
+              <div>
+                  <h3 className="font-semibold text-secondary mb-4 uppercase tracking-wider text-sm">Programs</h3>
+                  <nav className="flex flex-col gap-2">
+                      {programLinks.map((item) => (
+                          <Link key={item.name} href={item.href} className="text-sm hover:text-secondary transition-colors">
+                          {item.name}
+                          </Link>
+                      ))}
+                  </nav>
+              </div>
+
+              <div>
+                  <h3 className="font-semibold text-secondary mb-4 uppercase tracking-wider text-sm">Company</h3>
+                  <nav className="flex flex-col gap-2">
+                      {companyLinks.map((item) => (
+                          <Link key={item.name} href={item.href} className="text-sm hover:text-secondary transition-colors">
+                          {item.name}
+                          </Link>
+                      ))}
+                  </nav>
+              </div>
+
+              <div>
+                  <h3 className="font-semibold text-secondary mb-4 uppercase tracking-wider text-sm">Contact</h3>
+                  <div className="flex flex-col gap-2 text-sm">
+                       <a href="mailto:vasudev.aynthram@gmail.com" className="hover:text-secondary transition-colors">
+                          vasudev.aynthram@gmail.com
+                      </a>
+                      <a href="tel:+919703831819" className="hover:text-secondary transition-colors">
+                          +91 9703831819
+                      </a>
+                      <p>Odisha, India</p>
+                  </div>
+              </div>
+          </div>
+          <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm text-primary-foreground/50">
+              <p>&copy; {new Date().getFullYear()} Aynthram Leadership Academy. All Rights Reserved.</p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
