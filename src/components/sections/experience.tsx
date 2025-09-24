@@ -121,15 +121,15 @@ export default function Experience() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {differencePoints.map((point) => (
-                        <Card key={point.title} className="bg-background border-primary/10 hover:border-secondary transition-all shadow-sm hover:shadow-lg">
-                            <CardHeader className="flex flex-row items-center gap-4">
-                                <div className="bg-secondary/10 text-secondary p-3 rounded-full">
-                                    <point.icon className="w-6 h-6" />
+                        <Card key={point.title} className="text-center bg-card border-border/10 hover:shadow-xl transition-shadow duration-300 rounded-xl p-4">
+                            <CardHeader className="items-center pb-4">
+                                <div className="p-3 rounded-full bg-secondary/10">
+                                    <point.icon className="w-7 h-7 text-secondary" />
                                 </div>
-                                <CardTitle className="font-headline text-xl text-primary">{point.title}</CardTitle>
                             </CardHeader>
-                            <CardContent>
-                                <p className="text-muted-foreground">{point.description}</p>
+                            <CardContent className="pt-0">
+                                <CardTitle className="font-headline text-lg font-bold text-foreground mb-2">{point.title}</CardTitle>
+                                <p className="text-sm text-muted-foreground">{point.description}</p>
                             </CardContent>
                         </Card>
                     ))}
@@ -137,19 +137,19 @@ export default function Experience() {
             </div>
 
             <div className="container mx-auto px-4 md:px-6 mt-24">
-                <div className="bg-primary/5 rounded-lg p-8 md:p-12 border border-primary/10">
+                <div className="bg-primary rounded-lg p-8 md:p-12">
                     <div className="text-center max-w-3xl mx-auto mb-10">
-                        <h2 className="font-headline text-3xl font-bold text-primary">Why Traditional Interventions Fall Short</h2>
+                        <h2 className="font-headline text-3xl font-bold text-primary-foreground">Why Traditional Interventions Fall Short</h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8 text-center">
                         {interventionStats.map((stat) => (
                             <div key={stat.value}>
-                                <p className="text-4xl font-bold text-secondary font-headline">{stat.value}</p>
-                                <p className="mt-2 text-muted-foreground">{stat.description}</p>
+                                <p className="text-5xl font-bold text-secondary font-headline">{stat.value}</p>
+                                <p className="mt-2 text-primary-foreground/80">{stat.description}</p>
                             </div>
                         ))}
                     </div>
-                    <p className="text-center mt-8 text-primary font-medium">Aynthram reimagines leadership development with depth, authenticity, and cultural resonance.</p>
+                    <p className="text-center mt-10 text-primary-foreground font-medium max-w-2xl mx-auto">Aynthram reimagines leadership development with depth, authenticity, and cultural resonance.</p>
                 </div>
             </div>
         </section>
