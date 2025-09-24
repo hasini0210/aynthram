@@ -19,7 +19,7 @@ const navItems = [
 
 const Logo = () => (
   <Link href="/" className="flex items-center gap-4">
-    <Image src="/logo.png" alt="Aynthram Logo" width={140} height={28} />
+    <Image src="/images/logo.png" alt="Aynthram Logo" width={140} height={28} />
     <div className="hidden md:flex flex-col items-start -ml-2">
       <span className="text-xs font-medium text-primary-foreground/80 tracking-[0.2em]">LEADERSHIP ACADEMY</span>
     </div>

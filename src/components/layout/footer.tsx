@@ -18,7 +18,7 @@ const companyLinks = [
 
 const Logo = () => (
     <div className="flex items-center gap-4">
-        <Image src="/logo.png" alt="Aynthram Logo" width={180} height={36} />
+        <Image src="/images/logo.png" alt="Aynthram Logo" width={180} height={36} />
         <div className="flex flex-col items-start -ml-2">
             <span className="text-xs font-medium text-foreground/70 tracking-[0.2em]">LEADERSHIP ACADEMY</span>
         </div>
