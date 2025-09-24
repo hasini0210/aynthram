@@ -22,7 +22,6 @@ const changingSentences = [
 export default function Hero() {
   const [offsetY, setOffsetY] = useState(0);
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
 
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -33,11 +32,7 @@ export default function Hero() {
   
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsFading(true);
-      setTimeout(() => {
-        setCurrentSentenceIndex((prevIndex) => (prevIndex + 1) % changingSentences.length);
-        setIsFading(false);
-      }, 500); // match fade-out duration
+      setCurrentSentenceIndex((prevIndex) => (prevIndex + 1) % changingSentences.length);
     }, 3000); // change sentence every 3 seconds
 
     return () => clearInterval(interval);
@@ -72,10 +67,21 @@ export default function Hero() {
             <p className="mt-6 text-lg leading-8 text-primary-foreground/90 max-w-2xl">
               Immersive, art-led leadership programs rooted in Odisha’s heritage.
             </p>
-            <div className="mt-6 h-10">
-                <div className={cn("text-2xl font-semibold text-secondary transition-opacity duration-500", isFading ? 'opacity-0' : 'opacity-100')}>
-                    {changingSentences[currentSentenceIndex]}
-                </div>
+            <div className="mt-6 h-10 overflow-hidden">
+              <div className="relative h-full w-full">
+                {changingSentences.map((sentence, index) => (
+                   <span
+                    key={index}
+                    className="absolute w-full h-full transition-transform duration-500 ease-in-out text-2xl font-semibold text-secondary"
+                    style={{ 
+                      transform: `translateY(${(index - currentSentenceIndex) * 100}%)`,
+                      top: 0
+                    }}
+                  >
+                    {sentence}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className="mt-10 flex items-center gap-x-6">
               <Link href="#contact">
