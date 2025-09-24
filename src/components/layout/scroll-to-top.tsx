@@ -42,42 +42,37 @@ export default function ScrollToTop() {
     };
   }, []);
 
-  const circumference = 2 * Math.PI * 20; // 2 * pi * r (where r=20 from the SVG circle)
+  const circumference = 2 * Math.PI * 18; // 2 * pi * r (where r=18 from the SVG circle)
   const offset = circumference - (scrollProgress / 100) * circumference;
 
   return (
-    <div className="fixed bottom-8 right-8 z-50">
-      <Button
-        onClick={scrollToTop}
-        variant="default"
-        size="icon"
-        className={cn(
-          "relative h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg transition-opacity hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-          isVisible ? 'opacity-100' : 'opacity-0',
-          "disabled:pointer-events-auto"
-        )}
-        aria-label="Scroll to top"
-      >
+    <div className={cn(
+        "fixed bottom-8 right-8 z-50 transition-opacity",
+        isVisible ? 'opacity-100' : 'opacity-0',
+        "disabled:pointer-events-auto"
+      )}
+    >
+      <div className="relative flex items-center justify-center">
         <svg
-          className="absolute inset-0 h-full w-full"
-          viewBox="0 0 44 44"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+            className="absolute -top-10 -left-10 h-24 w-24"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
         >
           <circle
             cx="22"
             cy="22"
-            r="20"
-            stroke="hsl(var(--primary-foreground) / 0.1)"
-            strokeWidth="2.5"
+            r="18"
+            stroke="hsl(var(--primary) / 0.1)"
+            strokeWidth="2"
             fill="transparent"
           />
           <circle
             cx="22"
             cy="22"
-            r="20"
+            r="18"
             stroke="hsl(var(--secondary))"
-            strokeWidth="2.5"
+            strokeWidth="2"
             strokeDasharray={circumference}
             strokeDashoffset={offset}
             strokeLinecap="round"
@@ -85,9 +80,18 @@ export default function ScrollToTop() {
             className="transform -rotate-90 origin-center transition-all duration-300"
           />
         </svg>
-        <ChevronUp className="h-6 w-6" />
-        <span className="sr-only">Go to top</span>
-      </Button>
+
+        <Button
+          onClick={scrollToTop}
+          variant="default"
+          size="icon"
+          className="relative h-20 w-20 rounded-full bg-background text-foreground shadow-lg hover:bg-background/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="h-8 w-8" />
+          <span className="sr-only">Go to top</span>
+        </Button>
+      </div>
     </div>
   );
 }
