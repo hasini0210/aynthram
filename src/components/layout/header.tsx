@@ -62,7 +62,7 @@ export default function Header() {
               href={item.href} 
               className={cn(
                 "text-sm font-medium transition-colors",
-                activeId === item.id ? 'text-secondary font-bold' : 'text-primary-foreground/80 hover:text-secondary'
+                activeId === item.id ? 'text-secondary-foreground font-bold underline' : 'text-primary-foreground/80 hover:text-secondary'
               )}
             >
               {item.name}
@@ -100,7 +100,7 @@ export default function Header() {
                             href={item.href}
                             className={cn(
                               "text-lg font-medium transition-colors",
-                              activeId === item.id ? 'text-secondary font-bold' : 'text-primary-foreground hover:text-secondary'
+                              activeId === item.id ? 'text-secondary-foreground font-bold underline' : 'text-primary-foreground hover:text-secondary'
                             )}
                             onClick={() => setMobileMenuOpen(false)}
                         >
