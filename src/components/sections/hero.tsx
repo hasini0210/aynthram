@@ -63,7 +63,7 @@ export default function Hero() {
                 priority
             />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent" />
       </div>
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
@@ -75,7 +75,7 @@ export default function Hero() {
             <h1 className="font-headline text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-7xl">
               <span className="text-bloom">Crafting Leaders.</span>
               <br />
-              <span className="text-primary">Cultivating Legacies.</span>
+              <span className="text-primary-foreground">Cultivating Legacies.</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-foreground/90 max-w-2xl">
               Immersive, art-led leadership programs rooted in Odisha’s heritage.
@@ -85,7 +85,7 @@ export default function Hero() {
                 {changingSentences.map((sentence, index) => (
                    <span
                     key={index}
-                    className="absolute w-full h-full transition-transform duration-500 ease-in-out text-2xl font-semibold text-black"
+                    className="absolute w-full h-full transition-transform duration-500 ease-in-out text-2xl font-semibold text-primary-foreground"
                     style={{ 
                       transform: `translateY(${(index - currentSentenceIndex) * 100}%)`,
                       top: 0
