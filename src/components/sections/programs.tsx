@@ -1,7 +1,21 @@
+
+"use client";
+
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
 
 const programs = [
     {
@@ -47,6 +61,46 @@ const programs = [
     },
 ];
 
+type Program = (typeof programs)[0];
+
+const ProgramDialog = ({ program, children }: { program: Program, children: React.ReactNode }) => {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <Dialog open={open} onOpenChange={setOpen}>
+            <DialogTrigger asChild>
+                {children}
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px] bg-background">
+                <DialogHeader>
+                    <DialogTitle className="font-headline text-2xl text-foreground">{program.title}</DialogTitle>
+                    <DialogDescription className="text-secondary pt-1">{program.subtitle}</DialogDescription>
+                </DialogHeader>
+                <div className="py-4">
+                    <div className="flex-grow space-y-3">
+                        {program.features.map(feature => (
+                            <div key={feature} className="flex items-start gap-3">
+                                <CheckCircle2 className="w-5 h-5 mt-0.5 text-secondary/80 flex-shrink-0" />
+                                <p className="text-foreground/90">{feature}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <DialogFooter>
+                    <DialogClose asChild>
+                        <Link href="#contact" className="w-full">
+                            <Button variant="secondary" className="w-full">
+                                Talk to Us
+                            </Button>
+                        </Link>
+                    </DialogClose>
+                </DialogFooter>
+            </DialogContent>
+        </Dialog>
+    );
+};
+
+
 export default function Programs() {
   return (
     <section id="programs" className="bg-primary">
@@ -74,11 +128,11 @@ export default function Programs() {
                             ))}
                         </CardContent>
                         <CardFooter>
-                           <Link href="#contact" className="w-full">
-                             <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
-                                Explore Program
-                             </Button>
-                           </Link>
+                            <ProgramDialog program={program}>
+                                <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
+                                    Explore Program
+                                </Button>
+                            </ProgramDialog>
                         </CardFooter>
                     </Card>
                 ))}
