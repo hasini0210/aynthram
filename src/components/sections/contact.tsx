@@ -101,23 +101,42 @@ export default function Contact() {
 
             <div className="lg:col-span-3 space-y-8">
                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4 text-primary-foreground">Connect with Our Founder</h3>
-                    <div className="space-y-3">
-                         <div className="flex items-center gap-3">
-                            <User className="w-5 h-5 text-secondary"/>
-                            <div>
-                                <p className="font-semibold text-primary-foreground">Vasudev Vangara</p>
-                                <p className="text-sm text-primary-foreground/70">Founder & CEO</p>
+                    <h3 className="font-headline text-2xl font-semibold mb-4 text-primary-foreground">Connect with Our Founders</h3>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                            <div className="flex items-center gap-3">
+                                <User className="w-5 h-5 text-secondary"/>
+                                <div>
+                                    <p className="font-semibold text-primary-foreground">Vasudev Vangara</p>
+                                    <p className="text-sm text-primary-foreground/70">Co-founder & CEO</p>
+                                </div>
                             </div>
+                            <a href="mailto:vasudev.aynthram@gmail.com" className="flex items-center gap-3 group">
+                                <Mail className="w-5 h-5 text-secondary"/>
+                                <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">vasudev.aynthram@gmail.com</span>
+                            </a>
+                            <a href="tel:+919703831819" className="flex items-center gap-3 group">
+                                <Phone className="w-5 h-5 text-secondary"/>
+                                <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">+91 9703831819</span>
+                            </a>
                         </div>
-                        <a href="mailto:vasudev.aynthram@gmail.com" className="flex items-center gap-3 group">
-                            <Mail className="w-5 h-5 text-secondary"/>
-                            <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">vasudev.aynthram@gmail.com</span>
-                        </a>
-                        <a href="tel:+919703831819" className="flex items-center gap-3 group">
-                            <Phone className="w-5 h-5 text-secondary"/>
-                            <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">+91 9703831819</span>
-                        </a>
+                        <div className="space-y-3">
+                            <div className="flex items-center gap-3">
+                                <User className="w-5 h-5 text-secondary"/>
+                                <div>
+                                    <p className="font-semibold text-primary-foreground">Yamini krishna Rapeti</p>
+                                    <p className="text-sm text-primary-foreground/70">Co-Founder & CMO</p>
+                                </div>
+                            </div>
+                            <a href="mailto:yamini.aynthram@gmail.com" className="flex items-center gap-3 group">
+                                <Mail className="w-5 h-5 text-secondary"/>
+                                <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">yamini.aynthram@gmail.com</span>
+                            </a>
+                            <a href="tel:+917217866163" className="flex items-center gap-3 group">
+                                <Phone className="w-5 h-5 text-secondary"/>
+                                <span className="text-primary-foreground/70 group-hover:text-secondary transition-colors">+91 7217866163</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
