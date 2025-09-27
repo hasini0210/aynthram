@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 const partnerLogos = [
     { id: "partner-1", name: "Partner 1", src: "/images/partner1.png" },
@@ -6,6 +7,7 @@ const partnerLogos = [
     { id: "partner-3", name: "Partner 3", src: "/images/partner3.png" },
     { id: "partner-4", name: "Partner 4", src: "/images/partner4.png" },
     { id: "partner-5", name: "Partner 5", src: "/images/partner5.png" },
+    { id: "aic-nalanda", name: "AIC Nalanda", src: "/images/aic_nalanda.png", href: "https://www.aicnalanda.com/" },
 ];
 
 export default function Partners() {
@@ -16,8 +18,8 @@ export default function Partners() {
                     Trusted by Innovators and Industry Leaders
                 </h2>
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                    {partnerLogos.map(logo => (
-                        <div key={logo.id} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+                    {partnerLogos.map(logo => {
+                        const logoImage = (
                             <Image 
                                 src={logo.src}
                                 alt={logo.name}
@@ -25,8 +27,20 @@ export default function Partners() {
                                 height={70}
                                 className="object-contain"
                             />
-                        </div>
-                    ))}
+                        );
+                        
+                        return (
+                            <div key={logo.id} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+                                {logo.href ? (
+                                    <Link href={logo.href} target="_blank" rel="noopener noreferrer">
+                                        {logoImage}
+                                    </Link>
+                                ) : (
+                                    logoImage
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
