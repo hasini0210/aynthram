@@ -68,7 +68,7 @@ export default function Hero() {
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
           <div className="max-w-3xl animate-fade-in-up">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-foreground">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-black">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-blink"></span>
                 <span>Transforming Leaders Since 2023</span>
             </div>
