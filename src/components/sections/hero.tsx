@@ -72,12 +72,12 @@ export default function Hero() {
                 <span className="w-2 h-2 rounded-full bg-secondary animate-blink"></span>
                 <span>Transforming Leaders Since 2023</span>
             </div>
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-7xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-black sm:text-5xl md:text-7xl">
               Crafting Leaders.
               <br />
-              Cultivating Legacies.
+              <span className="text-primary">Cultivating Legacies.</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-foreground/90 max-w-2xl">
+            <p className="mt-6 text-lg leading-8 text-black/90 max-w-2xl">
               Immersive, art-led leadership programs rooted in Odisha’s heritage.
             </p>
             <div className="mt-6 h-10 overflow-hidden">
@@ -102,7 +102,7 @@ export default function Hero() {
                   Book a Program
                 </Button>
               </Link>
-              <Link href="#contact" className="text-sm font-semibold leading-6 text-foreground hover:underline">
+              <Link href="#contact" className="text-sm font-semibold leading-6 text-black hover:underline">
                 Request Brochure <span aria-hidden="true">→</span>
               </Link>
             </div>
@@ -111,16 +111,18 @@ export default function Hero() {
       </div>
       <div className="absolute bottom-8 left-0 z-20 w-full">
         <Marquee pauseOnHover className="[--duration:40s]">
-          {keywords.map((keyword) => (
-            <div
-              key={keyword}
-              className={cn(
-                "flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-2 text-primary-foreground bg-primary/40 backdrop-blur-sm mx-2"
-              )}
-            >
-              <span className="text-sm font-medium">{keyword}</span>
-            </div>
-          ))}
+          <div className="flex items-center">
+            {keywords.map((keyword) => (
+              <div
+                key={keyword}
+                className={cn(
+                  "flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-2 text-primary-foreground bg-primary/40 backdrop-blur-sm mx-2"
+                )}
+              >
+                <span className="text-sm font-medium">{keyword}</span>
+              </div>
+            ))}
+          </div>
         </Marquee>
       </div>
     </section>
