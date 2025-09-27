@@ -63,7 +63,7 @@ export default function Hero() {
                 priority
             />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/20 to-transparent" />
       </div>
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
