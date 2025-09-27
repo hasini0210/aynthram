@@ -63,21 +63,21 @@ export default function Hero() {
                 priority
             />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-transparent" />
       </div>
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
           <div className="max-w-3xl animate-fade-in-up">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-black">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-primary-foreground">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-blink"></span>
                 <span>Transforming Leaders Since 2023</span>
             </div>
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-7xl">
-              Crafting Leaders.
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-7xl">
+              <span className="text-bloom">Crafting Leaders.</span>
               <br />
               <span className="text-primary">Cultivating Legacies.</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-black/90 max-w-2xl">
+            <p className="mt-6 text-lg leading-8 text-primary-foreground/90 max-w-2xl">
               Immersive, art-led leadership programs rooted in Odisha’s heritage.
             </p>
             <div className="mt-6 h-10 overflow-hidden">
@@ -102,7 +102,7 @@ export default function Hero() {
                   Book a Program
                 </Button>
               </Link>
-              <Link href="#contact" className="text-sm font-semibold leading-6 text-black hover:underline">
+              <Link href="#contact" className="text-sm font-semibold leading-6 text-primary-foreground hover:underline">
                 Request Brochure <span aria-hidden="true">→</span>
               </Link>
             </div>
