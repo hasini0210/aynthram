@@ -63,21 +63,21 @@ export default function Hero() {
                 priority
             />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent" />
       </div>
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
           <div className="max-w-3xl animate-fade-in-up">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-primary-foreground">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-foreground">
                 <span className="w-2 h-2 rounded-full bg-secondary animate-blink"></span>
                 <span>Transforming Leaders Since 2023</span>
             </div>
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-7xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-7xl">
               Crafting Leaders.
               <br />
               Cultivating Legacies.
             </h1>
-            <p className="mt-6 text-lg leading-8 text-primary-foreground/90 max-w-2xl">
+            <p className="mt-6 text-lg leading-8 text-foreground/90 max-w-2xl">
               Immersive, art-led leadership programs rooted in Odisha’s heritage.
             </p>
             <div className="mt-6 h-10 overflow-hidden">
@@ -85,7 +85,7 @@ export default function Hero() {
                 {changingSentences.map((sentence, index) => (
                    <span
                     key={index}
-                    className="absolute w-full h-full transition-transform duration-500 ease-in-out text-2xl font-semibold text-secondary"
+                    className="absolute w-full h-full transition-transform duration-500 ease-in-out text-2xl font-semibold text-accent"
                     style={{ 
                       transform: `translateY(${(index - currentSentenceIndex) * 100}%)`,
                       top: 0
@@ -102,7 +102,7 @@ export default function Hero() {
                   Book a Program
                 </Button>
               </Link>
-              <Link href="#contact" className="text-sm font-semibold leading-6 text-primary-foreground hover:underline">
+              <Link href="#contact" className="text-sm font-semibold leading-6 text-foreground hover:underline">
                 Request Brochure <span aria-hidden="true">→</span>
               </Link>
             </div>
