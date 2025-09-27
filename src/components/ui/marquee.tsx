@@ -59,26 +59,30 @@ const Marquee = React.memo(
             "overflow-hidden [--duration:20s] [--gap:1rem] [gap:var(--gap)]",
             "flex",
             vertical ? "flex-col" : "flex-row",
+             pauseOnHover && "hover:[animation-play-state:paused]",
             className
           )}
           {...props}
         >
-          {Array(effectiveRepeat)
-            .fill(0)
-            .map((_, i) => (
-              <div
-                key={i}
-                ref={i === 0 ? contentRef : null}
-                className={cn("flex-shrink-0 [gap:var(--gap)]", {
-                  "animate-marquee-horizontal": true,
-                  "flex items-center": true,
-                  "[animation-direction:reverse]": reverse,
-                  "hover:[animation-play-state:paused]": pauseOnHover,
-                })}
-              >
-                {children}
-              </div>
-            ))}
+          <div
+            className={cn("flex-shrink-0 [gap:var(--gap)]", {
+              "animate-marquee-horizontal": true,
+              "flex items-center": true,
+              "[animation-direction:reverse]": reverse,
+            })}
+          >
+            {Array(effectiveRepeat)
+              .fill(0)
+              .map((_, i) => (
+                <div
+                  key={i}
+                  ref={i === 0 ? contentRef : null}
+                  className="flex items-center [gap:var(--gap)]"
+                >
+                  {children}
+                </div>
+              ))}
+          </div>
         </div>
       );
     }
