@@ -72,7 +72,7 @@ export default function Hero() {
                 <span className="w-2 h-2 rounded-full bg-secondary animate-blink"></span>
                 <span>Transforming Leaders Since 2023</span>
             </div>
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-black sm:text-5xl md:text-7xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-7xl">
               Crafting Leaders.
               <br />
               <span className="text-primary">Cultivating Legacies.</span>
@@ -85,7 +85,7 @@ export default function Hero() {
                 {changingSentences.map((sentence, index) => (
                    <span
                     key={index}
-                    className="absolute w-full h-full transition-transform duration-500 ease-in-out text-2xl font-semibold text-accent"
+                    className="absolute w-full h-full transition-transform duration-500 ease-in-out text-2xl font-semibold text-black"
                     style={{ 
                       transform: `translateY(${(index - currentSentenceIndex) * 100}%)`,
                       top: 0
