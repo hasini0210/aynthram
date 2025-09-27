@@ -28,11 +28,17 @@ const testimonials = [
     title: "HR Director, Global Corp",
     avatar: "/images/anjali.png"
   },
-    {
+  {
     quote: "The 'Founder's Mindset' retreat helped me navigate the complexities of scaling my startup with newfound clarity and resilience. A must for any entrepreneur.",
     name: "Siddharth Chen",
     title: "Founder & CEO, NextGen AI",
     avatar: "/images/siddharth.png"
+  },
+  {
+    quote: "Vasudev, through Aynthram, creates a space for deep reflection and self-discovery, guiding participants toward clarity, self-trust, and purpose. His unique balance of structure and fluidity allows for both focused insight and organic exploration. By listening deeply, asking sharp questions, and uncovering unspoken patterns, he helps leaders and changemakers reframe limiting beliefs, recognize their strengths, and make aligned decisions. Aynthram conversations with Vasudev are strategic, deeply human, and transformative",
+    name: "Laavanyaa",
+    title: "Participant",
+    avatar: "/images/priya.png"
   },
 ];
 
