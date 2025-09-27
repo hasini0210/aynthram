@@ -7,7 +7,6 @@ const partnerLogos = [
     { id: "partner-3", name: "Partner 3", src: "/images/partner3.png" },
     { id: "partner-4", name: "Partner 4", src: "/images/partner4.png" },
     { id: "partner-5", name: "Partner 5", src: "/images/partner5.png" },
-    { id: "aic-nalanda", name: "AIC Nalanda", src: "/images/aic_nalanda.png", href: "https://www.aicnalanda.com/" },
 ];
 
 export default function Partners() {

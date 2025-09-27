@@ -52,6 +52,12 @@ export default function Footer() {
                       <a href="#" aria-label="Twitter" className="text-foreground/80 hover:text-secondary transition-colors"><Twitter className="w-5 h-5"/></a>
                       <a href="#" aria-label="Instagram" className="text-foreground/80 hover:text-secondary transition-colors"><Instagram className="w-5 h-5"/></a>
                   </div>
+                   <div className="pt-6">
+                        <h3 className="font-semibold text-secondary mb-3 uppercase tracking-wider text-sm">Incubated At</h3>
+                        <Link href="https://www.aicnalanda.com/" target="_blank" rel="noopener noreferrer">
+                            <Image src="/images/aic_nalanda.png" alt="AIC Nalanda Logo" width={140} height={70} className="object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                        </Link>
+                    </div>
               </div>
 
               <div>
