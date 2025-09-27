@@ -4,29 +4,29 @@
 
 @layer base {
   :root {
-    --background: 55 88% 82%; /* Bloom */
-    --foreground: 162 82% 13%; /* Verdant */
+    --background: 55 60% 90%; /* Softer Bloom */
+    --foreground: 162 82% 10%; /* Darker Verdant */
 
-    --card: 55 88% 82%;
-    --card-foreground: 162 82% 13%;
+    --card: 55 60% 90%;
+    --card-foreground: 162 82% 10%;
 
-    --popover: 55 88% 82%;
-    --popover-foreground: 162 82% 13%;
+    --popover: 55 60% 90%;
+    --popover-foreground: 162 82% 10%;
 
-    --primary: 162 82% 13%; /* Verdant */
-    --primary-foreground: 55 88% 82%; /* Bloom */
+    --primary: 162 82% 10%; /* Darker Verdant */
+    --primary-foreground: 55 88% 82%; /* Original Bloom for contrast */
 
     --secondary: 45 90% 55%; /* Gold/Yellow Accent */
-    --secondary-foreground: 162 82% 13%; /* Verdant */
+    --secondary-foreground: 162 82% 10%; /* Darker Verdant */
 
     --muted: 165 20% 90%;
     --muted-foreground: 165 71% 25%;
 
     --accent: 45 90% 55%; /* Gold/Yellow Accent */
-    --accent-foreground: 162 82% 13%;
+    --accent-foreground: 162 82% 10%;
     
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 55 88% 82%; /* Bloom */
+    --destructive-foreground: 55 60% 90%; /* Softer Bloom */
 
     --border: 162 82% 20%;
     --input: 162 82% 15%;
