@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -62,7 +63,7 @@ export default function Hero() {
                 priority
             />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" />
       </div>
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
