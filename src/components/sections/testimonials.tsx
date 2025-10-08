@@ -11,6 +11,12 @@ import Image from 'next/image';
 
 const testimonials = [
   {
+    quote: "Vasudev, through Aynthram, creates a space for deep reflection and self-discovery, guiding participants toward clarity, self-trust, and purpose. His unique balance of structure and fluidity allows for both focused insight and organic exploration. By listening deeply, asking sharp questions, and uncovering unspoken patterns, he helps leaders and changemakers reframe limiting beliefs, recognize their strengths, and make aligned decisions. Aynthram conversations with Vasudev are strategic, deeply human, and transformative",
+    name: "Laavanyaa",
+    title: "Participant",
+    avatar: "/images/priya.png"
+  },
+  {
     quote: "Aynthram's program was a revelation. It connected me to a deeper sense of purpose and gave me practical tools to lead my team with more empathy and creativity. Truly transformative.",
     name: "Priya Sharma",
     title: "CEO, Innovate Inc.",
@@ -33,12 +39,6 @@ const testimonials = [
     name: "Siddharth Chen",
     title: "Founder & CEO, NextGen AI",
     avatar: "/images/siddharth.png"
-  },
-  {
-    quote: "Vasudev, through Aynthram, creates a space for deep reflection and self-discovery, guiding participants toward clarity, self-trust, and purpose. His unique balance of structure and fluidity allows for both focused insight and organic exploration. By listening deeply, asking sharp questions, and uncovering unspoken patterns, he helps leaders and changemakers reframe limiting beliefs, recognize their strengths, and make aligned decisions. Aynthram conversations with Vasudev are strategic, deeply human, and transformative",
-    name: "Laavanyaa",
-    title: "Participant",
-    avatar: "/images/priya.png"
   },
 ];
 
@@ -84,7 +84,7 @@ export default function Testimonials() {
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 flex items-start justify-center">
                  <div className={cn(
                     "p-1 transition-all duration-300 ease-in-out",
-                    current === index ? "scale-100" : "scale-90 opacity-40"
+                    current === index ? "scale-100" : "scale-90 opacity-40 blur-sm"
                   )}>
                   <Card className="bg-primary-foreground/5 border-primary-foreground/10 shadow-lg text-left w-[320px] min-h-[380px] flex flex-col">
                     <CardContent className="p-8 flex-grow flex flex-col">
