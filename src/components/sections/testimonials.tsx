@@ -18,26 +18,26 @@ const testimonials = [
   },
   {
     quote: "Aynthram's program was a revelation. It connected me to a deeper sense of purpose and gave me practical tools to lead my team with more empathy and creativity. Truly transformative.",
-    name: "Priya Sharma",
-    title: "CEO, Innovate Inc.",
+    name: "Placeholder Name",
+    title: "Future Participant",
     avatar: "/images/priya.png"
   },
   {
     quote: "As a founder, the 'Vision to Culture' workshop was invaluable. The performing arts elements brought a fresh perspective on sustainable growth and team alignment.",
-    name: "Rajesh Kumar",
-    title: "Founder, TechSolutions",
+    name: "Placeholder Name",
+    title: "Future Participant",
     avatar: "/images/rajesh.png"
   },
   {
     quote: "I've attended many leadership programs, but none have been as impactful as Aynthram's. The blend of cognitive science and ancient wisdom is powerful and practical.",
-    name: "Anjali Mehta",
-    title: "HR Director, Global Corp",
+    name: "Placeholder Name",
+    title: "Future Participant",
     avatar: "/images/anjali.png"
   },
   {
     quote: "The 'Founder's Mindset' retreat helped me navigate the complexities of scaling my startup with newfound clarity and resilience. A must for any entrepreneur.",
-    name: "Siddharth Chen",
-    title: "Founder & CEO, NextGen AI",
+    name: "Placeholder Name",
+    title: "Future Participant",
     avatar: "/images/siddharth.png"
   },
 ];
