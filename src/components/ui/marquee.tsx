@@ -59,7 +59,6 @@ const Marquee = React.memo(
             "overflow-hidden [--duration:20s] [--gap:1rem] [gap:var(--gap)]",
             "flex",
             vertical ? "flex-col" : "flex-row",
-             pauseOnHover && "hover:[animation-play-state:paused]",
             className
           )}
           {...props}
@@ -69,6 +68,7 @@ const Marquee = React.memo(
               "animate-marquee-horizontal": true,
               "flex items-center": true,
               "[animation-direction:reverse]": reverse,
+              "hover:[animation-play-state:paused]": pauseOnHover,
             })}
           >
             {Array(effectiveRepeat)
