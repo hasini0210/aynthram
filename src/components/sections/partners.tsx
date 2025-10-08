@@ -52,12 +52,12 @@ export default function Partners() {
     const secondRow = partnerLogos.slice(partnerLogos.length / 2);
 
     return (
-        <section id="partners" className="bg-primary text-primary-foreground overflow-hidden">
+        <section id="partners" className="bg-background text-foreground overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
-                <h2 className="text-center text-xl font-headline font-semibold text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
+                <h2 className="text-center text-xl font-headline font-semibold text-foreground/80 mb-12 max-w-2xl mx-auto">
                     Our Leadership Lineage: From Transformative Fellowships to Leadership in Action
                 </h2>
-                <div className="relative bg-background rounded-xl p-8 md:p-12">
+                <div className="relative bg-primary rounded-xl p-8 md:p-12">
                     <div className="flex flex-col gap-8">
                          <Marquee pauseOnHover className="[--duration:90s]">
                             {firstRow.map(logo => (
@@ -70,8 +70,8 @@ export default function Partners() {
                             ))}
                         </Marquee>
                     </div>
-                    <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background to-transparent"></div>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background to-transparent"></div>
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-primary to-transparent"></div>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-primary to-transparent"></div>
                 </div>
             </div>
         </section>
