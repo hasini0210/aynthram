@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { User, Mail, Phone, Building, MessageSquare } from "lucide-react";
+import { User, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
 const formSchema = z.object({
@@ -77,8 +77,8 @@ export default function Contact() {
             </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-8">
-            <div className="lg:col-span-2 relative">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="relative">
                <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary/50"></div>
                <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-secondary/50"></div>
                <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-secondary/50"></div>
@@ -99,7 +99,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="lg:col-span-3 space-y-8">
+            <div className="space-y-8">
                 <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4 text-primary-foreground">Connect with Our Founders</h3>
                     <div className="grid md:grid-cols-2 gap-8">
@@ -138,23 +138,6 @@ export default function Contact() {
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <div className="p-6 rounded-lg bg-primary/80 border border-primary-foreground/10">
-                     <h3 className="font-headline text-xl font-semibold text-primary-foreground">Transform Your Organization</h3>
-                     <p className="mt-2 text-primary-foreground/70">From individual leadership growth to organization-wide cultural transformation, discover how Aynthram can help you build leaders who don’t just stay relevant but redefine the game.</p>
-                     <Link href="/programs">
-                        <Button variant="outline" className="mt-4 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">Learn More</Button>
-                     </Link>
-                </div>
-
-                <div className="p-6 rounded-lg bg-primary border border-primary-foreground/10">
-                     <h3 className="font-headline text-xl font-semibold text-primary-foreground">Market Impact</h3>
-                     <ul className="mt-3 space-y-2 text-sm text-primary-foreground/70 list-disc list-inside">
-                        <li>Corporate L&D market in India: ₹5,800 Cr (8% CAGR)</li>
-                        <li>Experiential tourism projected: ₹15,000 Cr by 2027</li>
-                        <li>Heritage preservation through innovation</li>
-                     </ul>
                 </div>
             </div>
         </div>
