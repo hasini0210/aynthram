@@ -63,7 +63,7 @@ export default function Hero() {
                 priority
             />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" />
       </div>
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
@@ -113,14 +113,15 @@ export default function Hero() {
         <Marquee pauseOnHover className="[--duration:40s]">
           <div className="flex items-center">
             {keywords.map((keyword) => (
-              <div
+              <Link
+                href="#contact"
                 key={keyword}
                 className={cn(
-                  "flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-2 text-primary-foreground bg-primary/40 backdrop-blur-sm mx-2"
+                  "flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-2 text-primary-foreground bg-primary/40 backdrop-blur-sm mx-2 transition-colors hover:bg-secondary hover:text-secondary-foreground"
                 )}
               >
                 <span className="text-sm font-medium">{keyword}</span>
-              </div>
+              </Link>
             ))}
           </div>
         </Marquee>
