@@ -77,7 +77,7 @@ export default function Contact() {
             </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
             <div className="relative">
                <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary/50"></div>
                <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-secondary/50"></div>
