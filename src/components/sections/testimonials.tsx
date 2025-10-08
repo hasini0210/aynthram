@@ -5,43 +5,31 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Quote } from 'lucide-react';
+import { Quote, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 const testimonials = [
   {
     quote: "Vasudev, through Aynthram, creates a space for deep reflection and self-discovery, guiding participants toward clarity, self-trust, and purpose. His unique balance of structure and fluidity allows for both focused insight and organic exploration. By listening deeply, asking sharp questions, and uncovering unspoken patterns, he helps leaders and changemakers reframe limiting beliefs, recognize their strengths, and make aligned decisions. Aynthram conversations with Vasudev are strategic, deeply human, and transformative",
-    name: "Laavanyaa",
+    name: "Laavanya",
     title: "Participant",
     avatar: "/images/priya.png"
   },
   {
-    quote: "Aynthram's program was a revelation. It connected me to a deeper sense of purpose and gave me practical tools to lead my team with more empathy and creativity. Truly transformative.",
-    name: "Placeholder Name",
-    title: "Future Participant",
-    avatar: "/images/priya.png",
-    isPlaceholder: true,
-  },
-  {
-    quote: "As a founder, the 'Vision to Culture' workshop was invaluable. The performing arts elements brought a fresh perspective on sustainable growth and team alignment.",
-    name: "Placeholder Name",
-    title: "Future Participant",
+    quote: "Join the Aynthram journey.",
+    name: "Be a Part of Us",
+    title: "Explore our programs",
     avatar: "/images/rajesh.png",
     isPlaceholder: true,
   },
   {
-    quote: "I've attended many leadership programs, but none have been as impactful as Aynthram's. The blend of cognitive science and ancient wisdom is powerful and practical.",
-    name: "Placeholder Name",
-    title: "Future Participant",
+    quote: "Become a purpose-driven leader.",
+    name: "Start Your Transformation",
+    title: "Connect with our team",
     avatar: "/images/anjali.png",
-    isPlaceholder: true,
-  },
-  {
-    quote: "The 'Founder's Mindset' retreat helped me navigate the complexities of scaling my startup with newfound clarity and resilience. A must for any entrepreneur.",
-    name: "Placeholder Name",
-    title: "Future Participant",
-    avatar: "/images/siddharth.png",
     isPlaceholder: true,
   },
 ];
@@ -88,29 +76,35 @@ export default function Testimonials() {
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 flex items-start justify-center">
                  <div className={cn(
                     "p-1 transition-all duration-300 ease-in-out",
-                    current === index ? "scale-100" : "scale-90 opacity-40 blur-sm"
+                    current === index ? "scale-100" : "scale-90 opacity-60 blur-sm"
                   )}>
                   <Card className="bg-primary-foreground/5 border-primary-foreground/10 shadow-lg text-left w-[320px] min-h-[380px] flex flex-col">
-                    <CardContent className="p-8 flex-grow flex flex-col">
+                    <CardContent className="p-8 flex-grow flex flex-col justify-between">
                         {testimonial.isPlaceholder ? (
-                            <div className="flex-grow flex items-center justify-center">
-                                <div className="w-24 h-24 bg-secondary/10 rounded-full flex items-center justify-center">
-                                    <span className="text-secondary font-bold text-lg">...</span>
-                                </div>
+                            <div className="text-center flex flex-col items-center justify-center h-full">
+                                <Sparkles className="w-10 h-10 text-secondary mb-4"/>
+                                <p className="text-primary-foreground text-xl font-headline italic flex-grow">{testimonial.quote}</p>
+                                <Link href="#contact" className='mt-4'>
+                                  <Button variant="outline" className='border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground'>
+                                    {testimonial.name}
+                                  </Button>
+                                </Link>
                             </div>
                         ) : (
                             <>
-                                <Quote className="w-10 h-10 text-secondary mb-4"/>
-                                <p className="text-primary-foreground/80 italic flex-grow">"{testimonial.quote}"</p>
+                                <div>
+                                    <Quote className="w-10 h-10 text-secondary mb-4"/>
+                                    <p className="text-primary-foreground/80 italic">"{testimonial.quote}"</p>
+                                </div>
+                                <div className="pt-6 flex items-center gap-4 mt-auto">
+                                    <Image src={testimonial.avatar} alt={testimonial.name} width={50} height={50} className="rounded-full" />
+                                    <div>
+                                        <h3 className="font-bold text-primary-foreground">{testimonial.name}</h3>
+                                        <p className="text-sm text-primary-foreground/60">{testimonial.title}</p>
+                                    </div>
+                                </div>
                             </>
                         )}
-                        <div className="pt-6 flex items-center gap-4">
-                            <Image src={testimonial.avatar} alt={testimonial.name} width={50} height={50} className="rounded-full" />
-                            <div>
-                                <h3 className="font-bold text-primary-foreground">{testimonial.name}</h3>
-                                <p className="text-sm text-primary-foreground/60">{testimonial.title}</p>
-                            </div>
-                        </div>
                     </CardContent>
                   </Card>
                  </div>
