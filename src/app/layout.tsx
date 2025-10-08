@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Aynthram Leadership Academy — Art-Led Leadership & Experiential Retreats',
-  description: 'Art-led leadership immersions rooted in Odisha’s heritage. Workshops, retreats & experiential programs for leaders, founders, and teams.',
+  description: 'Art-led leadership immersions rooted in Indian Heritage. Workshops, retreats & experiential programs for leaders, founders, and teams.',
   metadataBase: new URL('https://aynthram.com'),
 };
 
