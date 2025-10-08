@@ -78,7 +78,7 @@ export default function Hero() {
               <span className="text-primary-foreground">Cultivating Legacies.</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-foreground/90 max-w-2xl">
-              Immersive, art-led leadership programs rooted in Odisha’s heritage.
+              Immersive, art-led leadership programs rooted in India’s heritage.
             </p>
             <div className="mt-6 h-10 overflow-hidden">
               <div className="relative h-full w-full">
