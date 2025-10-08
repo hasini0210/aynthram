@@ -29,6 +29,11 @@ const impactGoals = [
         label: "Foster a Virtuous Cycle",
         description: "To reinvest a significant portion of revenue back into community development and heritage preservation."
     },
+    {
+        icon: Users,
+        label: "Cultivate a Leadership Community",
+        description: "To build a global network of purpose-driven leaders committed to positive change."
+    }
 ];
 
 export default function Impact() {
