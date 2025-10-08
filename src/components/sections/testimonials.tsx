@@ -74,7 +74,7 @@ export default function Testimonials() {
         >
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 flex items-start justify-center">
+              <CarouselItem key={index} className="flex items-start justify-center">
                  <div className={cn(
                     "p-1 transition-all duration-300 ease-in-out",
                     current === index ? "scale-100" : "scale-90 opacity-60 blur-sm"
