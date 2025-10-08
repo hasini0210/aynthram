@@ -35,7 +35,7 @@ const PartnerLogo = ({ logo }: { logo: {id: string, name: string, src: string, h
     );
 
     return (
-        <div className="mx-8 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
+        <div className="mx-8 opacity-90 hover:opacity-100 transition-opacity duration-300">
             {logo.href ? (
                 <Link href={logo.href} target="_blank" rel="noopener noreferrer">
                     {logoImage}
@@ -48,9 +48,6 @@ const PartnerLogo = ({ logo }: { logo: {id: string, name: string, src: string, h
 };
 
 export default function Partners() {
-    const firstRow = partnerLogos.slice(0, partnerLogos.length / 2);
-    const secondRow = partnerLogos.slice(partnerLogos.length / 2);
-
     return (
         <section id="partners" className="bg-background text-foreground overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
@@ -58,15 +55,10 @@ export default function Partners() {
                     Our Leadership Lineage: From Transformative Fellowships to Leadership in Action
                 </h2>
                 <div className="relative bg-primary rounded-xl p-8 md:p-12">
-                    <div className="flex flex-col gap-8">
-                         <Marquee pauseOnHover className="[--duration:90s]">
-                            {firstRow.map(logo => (
+                    <div className="flex justify-center">
+                         <Marquee pauseOnHover className="[--duration:180s]">
+                            {partnerLogos.map(logo => (
                                 <PartnerLogo key={logo.id} logo={logo} />
-                            ))}
-                        </Marquee>
-                        <Marquee reverse pauseOnHover className="[--duration:90s]">
-                            {secondRow.map(logo => (
-                               <PartnerLogo key={logo.id} logo={logo} />
                             ))}
                         </Marquee>
                     </div>
