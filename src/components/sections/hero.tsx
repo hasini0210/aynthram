@@ -68,9 +68,15 @@ export default function Hero() {
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 md:px-6 text-left">
           <div className="max-w-3xl animate-fade-in-up">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-primary-foreground">
-                <span className="w-2 h-2 rounded-full bg-secondary animate-blink"></span>
-                <span>Transforming Leaders Since 2023</span>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-primary-foreground">
+                  <span className="w-2 h-2 rounded-full bg-secondary animate-blink"></span>
+                  <span>Transforming Leaders Since 2023</span>
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-secondary/50 bg-primary/40 px-4 py-1.5 text-sm text-primary-foreground">
+                <span>Incubated at </span>
+                <Link href="https://www.aicnalanda.com/" target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">AIC Nalanda</Link>
+              </div>
             </div>
             <h1 className="font-headline text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-7xl">
               <span className="text-bloom">Crafting Leaders.</span>
