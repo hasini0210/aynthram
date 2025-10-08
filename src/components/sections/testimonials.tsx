@@ -36,7 +36,7 @@ const testimonials = [
 
 export default function Testimonials() {
   const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
 
   useEffect(() => {
     if (!api) return;
@@ -68,6 +68,7 @@ export default function Testimonials() {
           opts={{
             align: "center",
             loop: true,
+            startIndex: 1,
           }}
           className="w-full max-w-5xl mx-auto"
         >
