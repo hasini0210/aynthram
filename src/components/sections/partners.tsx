@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
 import Marquee from "@/components/ui/marquee";
-import { cn } from "@/lib/utils";
 
 const partnerLogos = [
     { id: "teach-for-india", name: "Teach For India", src: "/images/partners/teach-for-india.png" },
@@ -24,7 +23,7 @@ const partnerLogos = [
     { id: "madurai-kamaraj-university", name: "Madurai Kamaraj University", src: "/images/partners/madurai-kamaraj-university.png" },
 ];
 
-const PartnerLogo = ({ logo }: { logo: typeof partnerLogos[0] }) => {
+const PartnerLogo = ({ logo }: { logo: {id: string, name: string, src: string, href?: string} }) => {
     const logoImage = (
         <Image 
             src={logo.src}
@@ -53,22 +52,24 @@ export default function Partners() {
     const secondRow = partnerLogos.slice(partnerLogos.length / 2);
 
     return (
-        <section id="partners" className="bg-background overflow-hidden">
+        <section id="partners" className="bg-primary text-primary-foreground overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
-                <h2 className="text-center text-xl font-headline font-semibold text-muted-foreground mb-12 max-w-2xl mx-auto">
+                <h2 className="text-center text-xl font-headline font-semibold text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
                     Our Leadership Lineage: From Transformative Fellowships to Leadership in Action
                 </h2>
-                <div className="relative flex flex-col gap-8">
-                     <Marquee pauseOnHover className="[--duration:90s]">
-                        {firstRow.map(logo => (
-                            <PartnerLogo key={logo.id} logo={logo} />
-                        ))}
-                    </Marquee>
-                    <Marquee reverse pauseOnHover className="[--duration:90s]">
-                        {secondRow.map(logo => (
-                           <PartnerLogo key={logo.id} logo={logo} />
-                        ))}
-                    </Marquee>
+                <div className="relative bg-background rounded-xl p-8 md:p-12">
+                    <div className="flex flex-col gap-8">
+                         <Marquee pauseOnHover className="[--duration:90s]">
+                            {firstRow.map(logo => (
+                                <PartnerLogo key={logo.id} logo={logo} />
+                            ))}
+                        </Marquee>
+                        <Marquee reverse pauseOnHover className="[--duration:90s]">
+                            {secondRow.map(logo => (
+                               <PartnerLogo key={logo.id} logo={logo} />
+                            ))}
+                        </Marquee>
+                    </div>
                     <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background to-transparent"></div>
                     <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background to-transparent"></div>
                 </div>
