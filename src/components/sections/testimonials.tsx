@@ -13,17 +13,17 @@ import { Button } from '../ui/button';
 
 const testimonials = [
   {
-    quote: "Vasudev, through Aynthram, creates a space for deep reflection and self-discovery, guiding participants toward clarity, self-trust, and purpose. His unique balance of structure and fluidity allows for both focused insight and organic exploration. By listening deeply, asking sharp questions, and uncovering unspoken patterns, he helps leaders and changemakers reframe limiting beliefs, recognize their strengths, and make aligned decisions. Aynthram conversations with Vasudev are strategic, deeply human, and transformative",
-    name: "Laavanya",
-    title: "Participant",
-    avatar: "/images/priya.png"
-  },
-  {
     quote: "Join the Aynthram journey.",
     name: "Be a Part of Us",
     title: "Explore our programs",
     avatar: "/images/rajesh.png",
     isPlaceholder: true,
+  },
+  {
+    quote: "Vasudev, through Aynthram, creates a space for deep reflection and self-discovery, guiding participants toward clarity, self-trust, and purpose. His unique balance of structure and fluidity allows for both focused insight and organic exploration. By listening deeply, asking sharp questions, and uncovering unspoken patterns, he helps leaders and changemakers reframe limiting beliefs, recognize their strengths, and make aligned decisions. Aynthram conversations with Vasudev are strategic, deeply human, and transformative",
+    name: "Laavanya",
+    title: "Participant",
+    avatar: "/images/priya.png"
   },
   {
     quote: "Become a purpose-driven leader.",
