@@ -48,7 +48,7 @@ export default function Footer() {
                       Transforming leadership through immersive experiences that blend ancient wisdom with modern practices.
                   </p>
                   <div className="flex items-center gap-4 pt-2">
-                      <a href="#" aria-label="LinkedIn" className="text-foreground/80 hover:text-secondary transition-colors"><Linkedin className="w-5 h-5"/></a>
+                      <a href="https://www.linkedin.com/company/aynthram/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-foreground/80 hover:text-secondary transition-colors"><Linkedin className="w-5 h-5"/></a>
                       <a href="#" aria-label="Twitter" className="text-foreground/80 hover:text-secondary transition-colors"><Twitter className="w-5 h-5"/></a>
                       <a href="#" aria-label="Instagram" className="text-foreground/80 hover:text-secondary transition-colors"><Instagram className="w-5 h-5"/></a>
                   </div>
