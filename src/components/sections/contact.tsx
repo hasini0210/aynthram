@@ -99,10 +99,14 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="space-y-8">
-                <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4 text-primary-foreground">Connect with Our Founders</h3>
-                    <div className="grid md:grid-cols-2 gap-8">
+            <div className="relative">
+               <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary/50"></div>
+               <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-secondary/50"></div>
+               <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-secondary/50"></div>
+               <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-secondary/50"></div>
+              <div className="p-8 rounded-lg shadow-lg bg-primary border border-border/10 h-full flex flex-col justify-center">
+                    <h3 className="font-headline text-2xl font-semibold mb-6 text-primary-foreground">Connect with Our Founders</h3>
+                    <div className="space-y-8">
                         <div className="space-y-3">
                             <div className="flex items-center gap-3">
                                 <User className="w-5 h-5 text-secondary"/>
